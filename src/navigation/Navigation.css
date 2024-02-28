@@ -13,7 +13,7 @@
 }
 
 .logo-container {
-  height: 70px;
+  height: 90px;
   width: 100px;
   /* padding: 25px; */
   display: flex;
@@ -45,5 +45,5 @@
 }
 
 .navigation .nav-links-container .nav-link:hover {
-  color: #0275d8;
+  color: #ff8080;
 }
