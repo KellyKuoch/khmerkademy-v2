@@ -8,7 +8,7 @@ const Lesson = () => {
       <div className="categories">
         <h1>Lessons</h1>
         <div className="categories-container">
-          <Link className="card" to="/multiple-choice">
+          <Link className="card" to="/lesson/daily-phrase">
             <img
               className="card-image"
               src="/img/khmer-daily.jpeg"

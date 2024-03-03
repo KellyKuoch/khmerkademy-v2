@@ -1,0 +1,73 @@
+/* Define your color variables */
+/* Note: CSS does not support SCSS variable declarations. You will have to replace the variables with actual values or use CSS custom properties. */
+
+/* Define your mixin styles */
+/* Note: CSS does not support mixins. You will have to manually apply these styles where needed. */
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 90px;
+  }
+  
+  .container .btn {
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #4a90e2;
+    text-decoration: none;
+    margin: 10px;
+  }
+  
+  .container .btn:hover,
+  .container .btn:focus {
+    background-color: #3f81c0; /* This is the hover color, which was originally $button-hover-color in SCSS */
+    color: #fff;
+  }
+  
+  .container .btn:focus {
+    background-color: #5fa1e6; /* This is the focus color, which was originally $button-focus-color in SCSS */
+    outline: none;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .list-item {
+    background-color: #EEF5FF;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .list-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .list-item .title,
+  .list-item .translation,
+  .list-item .pronunciation {
+    margin-top: 10px;
+  }
+  
+  .list-item .category-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    max-height: 200px;
+  }
+  
