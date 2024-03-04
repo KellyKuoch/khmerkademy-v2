@@ -5,6 +5,7 @@ import Homepage from "./components/Homepage.component";
 import Exercise from "./components/Exercises.component";
 import Lesson from "./components/Lessons.component";
 import DailyPhrase from "./components/DailyPhrase.component";
+import Conversation from "./content/Conversation.content";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="exercise" element={<Exercise />} />
         <Route path="lesson" element={<Lesson />} />
         <Route path="lesson/daily-phrase" element={<DailyPhrase />} />
+        <Route path="lesson/conversation" element={<Conversation />} />
       </Route>
     </Routes>
   );

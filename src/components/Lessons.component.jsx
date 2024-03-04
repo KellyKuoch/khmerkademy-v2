@@ -14,15 +14,15 @@ const Lesson = () => {
               src="/img/khmer-daily.jpeg"
               alt="Quiz"
             />
-            <div className="card-title">Daily Phrases</div>
+            <div className="card-title">Daily Khmer</div>
           </Link>
-          <Link className="card" to="/fill-blank">
+          <Link className="card" to="/lesson/conversation">
             <img
               className="card-image"
               src="/img/khmer-introduction.jpg"
               alt="Quiz"
             />
-            <div className="card-title">Introduction</div>
+            <div className="card-title">Conversation</div>
           </Link>
           <Link className="card" to="/matching">
             <img
