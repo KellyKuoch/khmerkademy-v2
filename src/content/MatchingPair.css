@@ -1,0 +1,43 @@
+/* App.css */
+.top {
+    padding-top: 90px;
+    text-align: center;
+}
+.top .h2 {
+    padding-top: 50px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: #f0f0f0; /* Light grey background */
+    border: 2px solid #ddd; /* Grey border */
+    color: #333; /* Dark grey text */
+    padding: 10px 20px; /* Top/bottom and left/right padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px; /* Margin around buttons */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  }
+  
+  button:hover {
+    background-color: #ddd; /* Slightly darker background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+  }
+
+  .congratulations {
+    font-size: 24px;
+    color: #4CAF50; /* Green text */
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
