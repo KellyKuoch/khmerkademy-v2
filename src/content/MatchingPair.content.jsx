@@ -41,26 +41,7 @@ const questions = [
     ],
     answer: "មនុស្សស្រី",
   },
-  {
-    prompt: "Mom",
-    options: [
-      { text: "ក្មេងស្រី", phonetic: "kmeng srey" },
-      { text: "ក្មេងប្រុស", phonetic: "kmeng bros" },
-      { text: "មនុស្សប្រុស", phonetic: "monus bros" },
-      { text: "មនុស្សស្រី", phonetic: "monus srey" },
-    ],
-    answer: "មនុស្សស្រី",
-  },
-  {
-    prompt: "A Woman",
-    options: [
-      { text: "ក្មេងស្រី", phonetic: "kmeng srey" },
-      { text: "ក្មេងប្រុស", phonetic: "kmeng bros" },
-      { text: "មនុស្សប្រុស", phonetic: "monus bros" },
-      { text: "មនុស្សស្រី", phonetic: "monus srey" },
-    ],
-    answer: "មនុស្សស្រី",
-  },
+  
 ];
 
 const MatchingPair = () => {
@@ -85,7 +66,7 @@ const MatchingPair = () => {
     return (
       <div className="congratulations">
         {" "}
-        Congratulations! You've completed the exercise
+        Congratulations!
       </div>
     );
   }
@@ -97,7 +78,7 @@ const MatchingPair = () => {
       <div className="box">
         {currentQuestion.options.map((option) => (
           <button
-            className="button-83"
+            className="button-93"
             key={option.text}
             onClick={() => handleOptionClick(option.text)}
           >

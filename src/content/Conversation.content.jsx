@@ -6,7 +6,7 @@ const Conversation = () => {
     <div>
       <Fragment>
         <div className="categories">
-          <h1>Conversation</h1>
+          {/* <h1>Conversation</h1> */}
           <div className="categories-container">
             <Link className="card" to="/lesson/daily-phrase">
               <img
@@ -14,7 +14,7 @@ const Conversation = () => {
                 src="https://placehold.co/600x400.png"
                 alt="Quiz"
               />
-              <div className="card-title">Lesson 1 - Introduction</div>
+              <div className="card-title">Section 1: Beginner</div>
             </Link>
             <Link className="card" to="/lesson/conversation">
               <img
@@ -22,7 +22,7 @@ const Conversation = () => {
                 src="https://placehold.co/600x400.png"
                 alt="Quiz"
               />
-              <div className="card-title">Lesson 2 - Family</div>
+              <div className="card-title">Section 2: Pre-intermediate</div>
             </Link>
             <Link className="card" to="/matching">
               <img
@@ -30,7 +30,7 @@ const Conversation = () => {
                 src="https://placehold.co/600x400.png"
                 alt="Quiz"
               />
-              <div className="card-title">Lesson 3 - Restaurant</div>
+              <div className="card-title">Section 3: Intermediate</div>
             </Link>
             <Link className="card" to="/matching">
               <img
@@ -38,7 +38,7 @@ const Conversation = () => {
                 src="https://placehold.co/600x400.png"
                 alt="Quiz"
               />
-              <div className="card-title">Lesson 4 - Holiday</div>
+              <div className="card-title">Section 4: Upper-Intermediate</div>
             </Link>
             <Link className="card" to="/matching">
               <img
@@ -46,7 +46,7 @@ const Conversation = () => {
                 src="https://placehold.co/600x400.png"
                 alt="Quiz"
               />
-              <div className="card-title">Lesson 5 - Culture</div>
+              <div className="card-title">Section 5: Advanced</div>
             </Link>
           </div>
         </div>

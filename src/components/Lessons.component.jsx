@@ -22,7 +22,7 @@ const Lesson = () => {
               src="/img/khmer-introduction.jpg"
               alt="Quiz"
             />
-            <div className="card-title">Conversation</div>
+            <div className="card-title">Learn</div>
           </Link>
           <Link className="card" to="/matching">
             <img
