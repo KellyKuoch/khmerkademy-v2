@@ -16,7 +16,7 @@ const Lesson = () => {
             />
             <div className="card-title">Daily Khmer</div>
           </Link>
-          <Link className="card" to="/lesson/conversation">
+          <Link className="card" to="/lesson/learn">
             <img
               className="card-image"
               src="/img/khmer-introduction.jpg"
