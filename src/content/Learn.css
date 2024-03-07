@@ -36,6 +36,13 @@ h2 {
   align-items: center;
   gap: 60px;
 }
+.small-section {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  gap: 20px;
+}
 .title {
   display: flex;
   flex-direction: column;
