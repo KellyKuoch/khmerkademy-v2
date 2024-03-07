@@ -16,7 +16,7 @@ const Exercise = () => {
             <img className="card-image" src="/img/blank.png" alt="Quiz" />
             <div className="card-title">Fill in the Blanks</div>
           </Link>
-          <Link className="card" to="/matching">
+          <Link className="card" to="/exercise/matching-pair">
             <img className="card-image" src="/img/matching.avif" alt="Quiz" />
             <div className="card-title">Matching Pairs</div>
           </Link>
