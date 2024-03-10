@@ -71,7 +71,7 @@ h2 {
   line-height: 1.15385;
   margin: 0;
   outline: none;
-  
+
   padding: 8px 0.8em;
   position: relative;
   text-align: center;
@@ -95,4 +95,11 @@ h2 {
 .button-7:active {
   background-color: #0064bd;
   box-shadow: none;
+}
+
+.profile-container img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
 }

@@ -10,18 +10,25 @@ const Navigation = () => {
           <Link to="/home">
             <img src="/Khmerkademy.png" alt="logo" />
           </Link>
-          
         </div>
         <div className="nav-links-container">
           <Link className="nav-link" to="/home">
             Home
           </Link>
-          <Link className="nav-link" to="/lesson">
+          <Link className="nav-link" to="/daily-phrase">
+            Daily Khmer
+          </Link>
+          <Link className="nav-link" to="/lessons">
             Lessons
           </Link>
           <Link className="nav-link" to="/exercise">
             Exercises
           </Link>
+          <div className="profile-container">
+            <Link className="nav-link" to="/profile">
+              <img src="/img/nezuko-1.png" alt="logo" />
+            </Link>
+          </div>
         </div>
       </div>
       <Outlet />
