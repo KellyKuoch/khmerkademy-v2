@@ -1,7 +1,3 @@
-.App {
-  /* font-family: sans-serif; */
-  text-align: center;
-}
 h2 {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -12,10 +8,19 @@ h2 {
 
 .main-flex {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 100px;
+}
+.main-topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid black; */
+  margin: 60px;
+  padding: 5px;
+  width: auto;
 }
 .main-grid {
   display: flex;
@@ -53,6 +58,16 @@ h2 {
 .img {
   width: 200px;
   height: auto;
+}
+
+.small-topic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  width: auto;
 }
 /* CSS */
 .button-7 {

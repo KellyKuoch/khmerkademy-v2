@@ -2,7 +2,7 @@ import "./Homepage.css";
 
 const Homepage = () => {
   return (
-    <div className="container">
+    <div className="container-1">
       <div className="slides slide1">
         <img src="./img/angkor-wat.png" alt="pretty" />
         <h2>Unlocking Cambodia's Potential, One Lesson at a Time</h2>

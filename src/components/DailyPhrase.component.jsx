@@ -1,8 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import "./DailyPhrase.css";
-
-
+import styles from "./DailyPhrase.css";
 const DailyPhrase = () => {
   const categories = [
     {
@@ -56,11 +55,17 @@ const DailyPhrase = () => {
   };
 
   const today = new Date();
-  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   const dayIndex = today.getDay();
   const dayName = days[dayIndex];
-
-  
 
   //   useEffect(async () => {
   // const a = await getCategoriesAndDocuments();
@@ -70,36 +75,45 @@ const DailyPhrase = () => {
   const currentCategory = categories[currentIndex];
 
   return (
-    <div className="container">
-      <h1>New Phrases for {dayName}</h1>
-      <div className="box">
-        <div className="list-item">
-          <img
-            src={currentCategory.imgaeUrl}
-            alt={currentCategory.imgaeUrl}
-            className="category-image"
-          />
-          <span className="title">{currentCategory.title}</span>
-          <span className="translation">{currentCategory.translation}</span>
-          <span className="pronunciation">{currentCategory.pronunciation}</span>
-        </div>
-      </div>
-      <button
-        className="btn"
-        onClick={showPrevious}
-        disabled={currentIndex === 0}
-      >
-        Previous
-      </button>
-      <button
-        className="btn"
-        onClick={showNext}
-        disabled={currentIndex === categories.length - 1}
-      >
-        Next
-      </button>
+    <>
+      <header className="header">
+        <h1>New Phrases for {dayName}</h1>
+      </header>
+
+      <main className="main">
+        <section className="categorySection">
+          <article className="category">
+            <img
+              src={currentCategory.imgaeUrl} // Note: Check the spelling of "imgaeUrl"
+              alt={currentCategory.title}
+              className="categoryImage"
+            />
+            <h2 className="title">{currentCategory.title}</h2>
+            <p className="translation">{currentCategory.translation}</p>
+            <p className="pronunciation">{currentCategory.pronunciation}</p>
+          </article>
+        </section>
+
+        <nav className="Buttom">
+          <button
+            className="button-8"
+            onClick={showPrevious}
+            disabled={currentIndex === 0}
+          >
+            Previous
+          </button>
+          <button
+            className="button-8"
+            onClick={showNext}
+            disabled={currentIndex === categories.length - 1}
+          >
+            Next
+          </button>
+        </nav>
+      </main>
+
       <Outlet />
-    </div>
+    </>
   );
 };
 
