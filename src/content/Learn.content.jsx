@@ -20,7 +20,7 @@ const Learn = () => {
                 <div className="title">
                   <h2>Section 1: Beginner</h2>
                 </div>
-                <Link to="/lesson/daily-phrase" className="button-7">
+                <Link to="/learn/section-1" className="button-7">
                   CONTINUE
                 </Link>
               </div>

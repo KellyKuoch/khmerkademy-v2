@@ -7,6 +7,7 @@ import DailyPhrase from "./components/DailyPhrase.component";
 import MatchingPair from "./content/MatchingPair.content";
 import Learn from "./content/Learn.content";
 import Profile from "./authentication/Profile.authentication";
+import Unit from "./units/Unit.units";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="exercise" element={<Exercise />} />
         <Route path="exercise/matching-pair" element={<MatchingPair />} />
         <Route path="lessons" element={<Learn />} />
+        <Route path="learn/section-1" element={<Unit />} />
         <Route path="profile" element={<Profile />} />
       </Route>
     </Routes>
