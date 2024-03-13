@@ -1,9 +1,25 @@
-.small-topic {
+.small-topic-culture {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
-  margin: 10px;
+  border: 2px solid black;
+  border-radius: 40px;
+  margin: 5px;
   padding: 10px;
   width: auto;
+  background: #3C3633;
+  color: white;
+}
+
+.culture-img {
+  width: 150px;
+}
+
+.fun-fact-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 15px;
 }

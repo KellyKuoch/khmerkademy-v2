@@ -8,7 +8,7 @@ const Learn = () => {
     <div className="main-flex">
       <Fragment>
         {/* cutlure topic component - promote Cambodian Rich Culture */}
-        <div className="main-topics">
+        <div className="culture-main">
           <Culture />
         </div>
 
@@ -86,7 +86,7 @@ const Learn = () => {
 
         <Outlet />
       </Fragment>
-      <div className="header-chat"></div>
+      {/* <div className="header-chat"></div> */}
     </div>
   );
 };

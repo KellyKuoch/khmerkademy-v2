@@ -9,19 +9,33 @@ h2 {
 .main-flex {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 100px;
+  padding-top: 40px;
 }
 .main-topics {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-between; */
   align-items: center;
   /* border: 1px solid black; */
   margin: 60px;
   padding: 5px;
   width: auto;
 }
+
+.culture-main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* border: 1px solid black; */
+  
+  padding-top: 60px;
+  padding-left: 40px;
+  width: 250px;
+}
+
 .main-grid {
   display: flex;
   flex-direction: column;
