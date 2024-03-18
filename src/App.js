@@ -8,6 +8,7 @@ import MatchingPair from "./content/MatchingPair.content";
 import Learn from "./content/Learn.content";
 import Profile from "./authentication/Profile.authentication";
 import Unit from "./units/Unit.units";
+import Culture from "./culture-topic/Culture.culture-topic";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route index element={<Homepage />} />
         <Route path="home" element={<Homepage />} />
         <Route path="daily-phrase" element={<DailyPhrase />} />
+        <Route path="fun-facts" element={<Culture />} />
         <Route path="exercise" element={<Exercise />} />
         <Route path="exercise/matching-pair" element={<MatchingPair />} />
         <Route path="lessons" element={<Learn />} />

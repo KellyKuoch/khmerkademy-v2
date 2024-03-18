@@ -6,7 +6,7 @@ article {
   position: relative;
   border-radius: 16px;
   box-shadow: none;
-  background: #fff;
+  background: #eeeeee;
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -100,15 +100,14 @@ Generic layout (demo looks)
 } */
 
 .articles {
-  padding-top: 15px;
+  padding-top: 100px;
   display: grid;
-  max-width: 500px;
+  max-width: 1200px;
   margin-inline: auto;
   padding-inline: 24px;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
 }
-
 
 @media screen and (max-width: 428px) {
   article {

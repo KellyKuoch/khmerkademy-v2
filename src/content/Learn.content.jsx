@@ -8,9 +8,7 @@ const Learn = () => {
     <div className="main-flex">
       <Fragment>
         {/* cutlure topic component - promote Cambodian Rich Culture */}
-        <div className="culture-main">
-          <Culture />
-        </div>
+        <div className="culture-main">{/* <Culture /> */}</div>
 
         <div class="main-topics">
           <div className="main-grid">
