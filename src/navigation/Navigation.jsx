@@ -30,7 +30,7 @@ const Navigation = () => {
           </Link>
           <div className="profile-container">
             <Link className="nav-link" to="/profile">
-              <img src="/img/nezuko-1.png" alt="logo" />
+              <img src="/img/anya-profile.webp" alt="logo" />
             </Link>
           </div>
         </div>

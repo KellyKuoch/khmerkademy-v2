@@ -49,7 +49,7 @@ const festivals = [
   {
     id: 6,
     image: "/culture-img/khmer-noodle.jpeg",
-    title: "Om Banh Chok (Khmer Noodle)",
+    title: "Nom Banh Chok (Khmer Noodle)",
     category: "food",
     article:
       "Nom Banh Chok, commonly known as Khmer noodles, is another beloved dish. It's a breakfast favorite featuring fermented rice noodles topped with a fish-based green curry",
@@ -91,7 +91,7 @@ const Culture = () => {
         <article>
           <div className="article-wrapper">
             <figure>
-              <img src={item.image} />
+              <img src={item.image} alt="culture-img" />
             </figure>
             <div className="article-body">
               <h2>{item.title}</h2>
