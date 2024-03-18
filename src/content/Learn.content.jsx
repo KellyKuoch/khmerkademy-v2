@@ -3,6 +3,40 @@ import { Fragment } from "react";
 import "./Learn.css";
 // import Culture from "../culture-topic/Culture.culture-topic";
 import Progress from "../Progress/Progress";
+
+const sections = [
+  {
+    id: 1,
+    title: "Section 1: Beginner",
+    image: "/section-img/charmander.png",
+    link: "/learn/section-1",
+  },
+  {
+    id: 2,
+    title: "Section 2: Pre-Intermediate",
+    image: "/section-img/sonic.png",
+    link: "/learn/section-1",
+  },
+  {
+    id: 3,
+    title: "Section 3: Intermediate",
+    image: "/section-img/pngegg.png",
+    link: "/learn/section-1",
+  },
+  {
+    id: 4,
+    title: "Section 4: Upper-Intermediate",
+    image: "/section-img/pokemon.png",
+    link: "/learn/section-1",
+  },
+  {
+    id: 5,
+    title: "Section 5: Advance",
+    image: "/section-img/toroto.png",
+    link: "/learn/section-1",
+  },
+];
+
 const Learn = () => {
   return (
     <div className="main-flex">
@@ -11,71 +45,21 @@ const Learn = () => {
         <div className="culture-main">{/* <Culture /> */}</div>
 
         <div class="main-topics">
-          <div className="main-grid">
-            <div className="section">
-              <img src="/section-img/pngegg.png" alt="1" className="img" />
-              <div className="small-section">
-                <div className="title">
-                  <h2>Section 1: Beginner</h2>
+          {sections.map((item) => (
+            <div className="main-grid">
+              <div className="section">
+                <img src={item.image} alt="1" className="img" />
+                <div className="small-section">
+                  <div className="title">
+                    <h2>{item.title}</h2>
+                  </div>
+                  <Link to={item.link} className="button-7">
+                    CONTINUE
+                  </Link>
                 </div>
-                <Link to="/learn/section-1" className="button-7">
-                  CONTINUE
-                </Link>
               </div>
             </div>
-          </div>
-          <div className="main-grid">
-            <div className="section">
-              <img src="/section-img/pokemon.png" alt="1" className="img" />
-              <div className="small-section">
-                <div className="title">
-                  <h2>Section 2: Pre-Intermediate</h2>
-                </div>
-                <Link to="/lesson/daily-phrase" className="button-7">
-                  CONTINUE
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="main-grid">
-            <div className="section">
-              <img src="/section-img/toroto.png" alt="1" className="img" />
-              <div className="small-section">
-                <div className="title">
-                  <h2>Section 3: Intermediate</h2>
-                </div>
-                <Link to="/lesson/daily-phrase" className="button-7">
-                  CONTINUE
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="main-grid">
-            <div className="section">
-              <img src="/section-img/charmander.png" alt="1" className="img" />
-              <div className="small-section">
-                <div className="title">
-                  <h2>Section 4: Upper-Intermediate</h2>
-                </div>
-                <Link to="/lesson/daily-phrase" className="button-7">
-                  CONTINUE
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="main-grid">
-            <div className="section">
-              <img src="/section-img/sonic.png" alt="1" className="img" />
-              <div className="small-section">
-                <div className="title">
-                  <h2>Section 5: Advance</h2>
-                </div>
-                <Link to="/lesson/daily-phrase" className="button-7">
-                  CONTINUE
-                </Link>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="main-topics">
