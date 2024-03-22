@@ -18,15 +18,19 @@ const Navigation = () => {
           <Link className="nav-link" to="/daily-phrase">
             Daily Khmer
           </Link>
+          <Link className="nav-link" to="/fun-facts">
+            Fun Facts
+          </Link>
           <Link className="nav-link" to="/lessons">
             Lessons
           </Link>
+
           <Link className="nav-link" to="/exercise">
             Exercises
           </Link>
           <div className="profile-container">
             <Link className="nav-link" to="/profile">
-              <img src="/img/nezuko-1.png" alt="logo" />
+              <img src="/img/anya-profile.webp" alt="logo" />
             </Link>
           </div>
         </div>
