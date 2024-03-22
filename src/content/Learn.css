@@ -142,11 +142,12 @@ h2 {
   .main-topics,
   .culture-main {
     margin: 20px;
-    padding: 10px;
+    padding-top: 60px;
     width: auto; /* Adjust as needed */
   }
 
   .main-grid {
+    padding-top: 10px;
     width: auto; /* Adjust width for smaller screens */
     margin: 10px;
     border-radius: 20px; /* Optional: adjust for smaller screens */
