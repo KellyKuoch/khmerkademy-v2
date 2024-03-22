@@ -1,7 +1,5 @@
 import "./Homepage.css";
-
-
-
+import { Link } from "react-router-dom";
 export default function App() {
   return (
     <div className="main-homepage">
@@ -9,8 +7,12 @@ export default function App() {
         <div className="left-top">
           <h2>Learn a language for free. Forever</h2>
           <div className="button-row">
-            <button>Log In</button>
-            <button>Sign Up</button>
+            <Link to="/learn/section-1" className="button-7">
+              Log In
+            </Link>
+            <Link to="/learn/section-1" className="button-7">
+              Sign Up
+            </Link>
           </div>
         </div>
         <img
@@ -65,7 +67,9 @@ export default function App() {
         <div className="decriptions">
           <h2>Welcome to KhmerKademy</h2>
           <p>Your new language learning journey starts here</p>
-          <button>Start Learning</button>
+          <Link to="/learn/section-1" className="button-7">
+            Sign Up
+          </Link>
         </div>
       </div>
       <div className="footer-container">

@@ -54,7 +54,7 @@ const Learn = () => {
                     <h2>{item.title}</h2>
                   </div>
                   <Link to={item.link} className="button-7">
-                    CONTINUE
+                    START HERE
                   </Link>
                 </div>
               </div>

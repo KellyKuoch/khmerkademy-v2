@@ -95,3 +95,83 @@
   background-color: #0064bd;
   box-shadow: none;
 }
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
+    padding-top: 60px;
+    /* Adjustments for smaller screens */
+  }
+
+  .main {
+    /* Adjustments for smaller screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categorySection {
+    margin: 1rem 0;
+    width: 300px;
+    /* Adjustments for smaller screens */
+  }
+
+  .category {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    /* Adjustments for smaller screens */
+  }
+
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+
+  .translation,
+  .pronunciation {
+    font-size: 0.9rem;
+    /* Adjustments for smaller screens */
+  }
+
+  .button-8 {
+    background-color: #f6995c;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #344955;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+      sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+
+    padding: 8px 0.8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    /* Adjustments for smaller screens */
+  }
+
+  .button-8:hover,
+  .button-8:focus,
+  .button-8:active {
+    /* Adjustments for smaller screens */
+  }
+
+  .Buttom {
+    gap: 50px;
+    /* Adjustments for smaller screens */
+  }
+}
