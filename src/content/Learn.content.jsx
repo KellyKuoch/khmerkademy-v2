@@ -39,10 +39,10 @@ const sections = [
 
 const Learn = () => {
   return (
-    <div className="main-flex">
+    <div>
       <Fragment>
         {/* cutlure topic component - promote Cambodian Rich Culture */}
-        <div className="culture-main">{/* <Culture /> */}</div>
+        {/* <div className="culture-main"><Culture /></div> */}
 
         <div class="main-topics">
           {sections.map((item) => (
@@ -62,9 +62,9 @@ const Learn = () => {
           ))}
         </div>
 
-        <div className="main-topics">
+        {/* <div className="main-topics">
           <Progress />
-        </div>
+        </div> */}
 
         <Outlet />
       </Fragment>

@@ -20,7 +20,7 @@ h2 {
   align-items: center;
   /* border: 1px solid black; */
   margin: 60px;
-  padding: 5px;
+  padding-top: 20px;
   width: auto;
 }
 
@@ -131,4 +131,43 @@ h2 {
   width: 45px;
   height: 45px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .main-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-topics, .culture-main {
+    margin: 20px;
+    padding: 10px;
+    width: auto; /* Adjust as needed */
+  }
+
+  .main-grid {
+    width: auto; /* Adjust width for smaller screens */
+    margin: 10px;
+    border-radius: 20px; /* Optional: adjust for smaller screens */
+  }
+
+  .section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .small-section, .title {
+    gap: 10px;
+  }
+
+  .img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+  }
+
+  .small-topic {
+    width: auto; /* Adjust width as needed */
+  }
+
+  /* Add any other responsive adjustments here */
 }
