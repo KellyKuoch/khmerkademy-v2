@@ -2,7 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 import { Fragment } from "react";
 import "./Learn.css";
 // import Culture from "../culture-topic/Culture.culture-topic";
-import Progress from "../Progress/Progress";
+//import Progress from "../Progress/Progress";
 
 const sections = [
   {
