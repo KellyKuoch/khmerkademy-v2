@@ -9,6 +9,8 @@ import Learn from "./content/Learn.content";
 import Profile from "./authentication/Profile.authentication";
 import Unit from "./units/Unit.units";
 import Culture from "./culture-topic/Culture.culture-topic";
+import Vocabulary from "./units/Vocabulary.unit";
+import Conversatoin from "./units/Conversation.unit";
 
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const App = () => {
         <Route path="exercise/matching-pair" element={<MatchingPair />} />
         <Route path="lessons" element={<Learn />} />
         <Route path="learn/section-1" element={<Unit />} />
+        <Route path="unit/vocabulary" element={<Vocabulary />} />
+        <Route path="unit/conversation" element={<Conversatoin />} />
         <Route path="profile" element={<Profile />} />
       </Route>
     </Routes>

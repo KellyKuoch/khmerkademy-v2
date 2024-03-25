@@ -2,7 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 import { Fragment } from "react";
 import "./Learn.css";
 // import Culture from "../culture-topic/Culture.culture-topic";
-import Progress from "../Progress/Progress";
+//import Progress from "../Progress/Progress";
 
 const sections = [
   {
@@ -39,10 +39,10 @@ const sections = [
 
 const Learn = () => {
   return (
-    <div className="main-flex">
+    <div>
       <Fragment>
         {/* cutlure topic component - promote Cambodian Rich Culture */}
-        <div className="culture-main">{/* <Culture /> */}</div>
+        {/* <div className="culture-main"><Culture /></div> */}
 
         <div class="main-topics">
           {sections.map((item) => (
@@ -54,7 +54,7 @@ const Learn = () => {
                     <h2>{item.title}</h2>
                   </div>
                   <Link to={item.link} className="button-7">
-                    CONTINUE
+                    START HERE
                   </Link>
                 </div>
               </div>
@@ -62,9 +62,9 @@ const Learn = () => {
           ))}
         </div>
 
-        <div className="main-topics">
+        {/* <div className="main-topics">
           <Progress />
-        </div>
+        </div> */}
 
         <Outlet />
       </Fragment>

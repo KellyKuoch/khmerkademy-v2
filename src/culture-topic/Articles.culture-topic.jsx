@@ -1,13 +1,15 @@
-const Article = () => {
+import "./Article.css";
+const Article = ({ item, closePopup }) => {
   return (
-    <div>
-      <h1>This is Article List Component</h1>
-      <h1>This is Article List Component</h1>
-      <h1>This is Article List Component</h1>
-      <h1>This is Article List Component</h1>
-      <h1>This is Article List Component</h1>
-      <h1>This is Article List Component</h1>
-      <h1>This is Article List Component</h1>
+    <div className="popup">
+      <div className="popup-content">
+        <span className="close" onClick={closePopup}>
+          &times;
+        </span>
+        <img src={item.image} alt="culture-img" className="image-popup" />
+        <h2>{item.title}</h2>
+        <p>{item.link}</p>
+      </div>
     </div>
   );
 };

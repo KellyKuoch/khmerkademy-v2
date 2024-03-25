@@ -101,6 +101,7 @@ Generic layout (demo looks)
 
 .articles {
   padding-top: 100px;
+  padding-bottom: 50px;
   display: grid;
   max-width: 1200px;
   margin-inline: auto;
