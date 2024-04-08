@@ -12,16 +12,21 @@ const Unit = () => {
               <h2>Unit 1</h2>
             </div>
             <div className="small-insider-unit">
-              <img
-                src="https://placehold.co/600x400?text=Consonent"
-                alt="logo"
-                className="fish"
-              />
-              <img
-                src="https://placehold.co/600x400?text=Vowel"
-                alt="logo"
-                className="fish"
-              />
+              <Link to="/unit/consonants">
+                <img
+                  src="https://placehold.co/600x400?text=Consonent"
+                  alt="logo"
+                  className="fish"
+                />
+              </Link>
+              <Link to="/unit/vowels">
+                <img
+                  src="https://placehold.co/600x400?text=Vowel"
+                  alt="logo"
+                  className="fish"
+                />
+              </Link>
+
               <Link to="/unit/vocabulary">
                 {" "}
                 <img

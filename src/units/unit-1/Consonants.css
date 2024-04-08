@@ -1,0 +1,28 @@
+.consonant p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.main-consonants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.consonants-boxes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.consonant {
+    background-color: #E5DDC5;
+    border: solid black 1px;
+    border-radius: 5px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

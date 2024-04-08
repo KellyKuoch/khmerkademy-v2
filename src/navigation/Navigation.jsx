@@ -8,7 +8,7 @@ const Navigation = () => {
       <div className="navigation">
         <div className="logo-container">
           <Link to="/home">
-            <img src="/Khmerkademy.png" alt="logo" />
+            <img src="./img/Khmerkademy.png" alt="logo" />
           </Link>
         </div>
         <div className="nav-links-container">
