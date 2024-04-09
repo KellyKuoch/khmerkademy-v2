@@ -18,15 +18,16 @@ const Navigation = () => {
           <Link className="nav-link" to="/daily-phrase">
             Daily Khmer
           </Link>
-          <Link className="nav-link" to="/fun-facts">
-            Fun Facts
-          </Link>
+
           <Link className="nav-link" to="/lessons">
             Lessons
           </Link>
 
           <Link className="nav-link" to="/exercise">
             Exercises
+          </Link>
+          <Link className="nav-link" to="/fun-facts">
+            Fun Facts
           </Link>
           <div className="profile-container">
             <Link className="nav-link" to="/profile">

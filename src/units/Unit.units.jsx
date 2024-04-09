@@ -12,37 +12,50 @@ const Unit = () => {
               <h2>Unit 1</h2>
             </div>
             <div className="small-insider-unit">
-              <Link to="/unit/consonants">
+              <Link to="/unit/consonants" className="each-unit">
                 <img
                   src="https://placehold.co/600x400?text=Consonent"
                   alt="logo"
                   className="fish"
                 />
+                <span>Consonent</span>
               </Link>
-              <Link to="/unit/vowels">
+              <Link to="/unit/vowels" className="each-unit">
                 <img
                   src="https://placehold.co/600x400?text=Vowel"
                   alt="logo"
                   className="fish"
                 />
+                <span>Vowel</span>
               </Link>
 
-              <Link to="/unit/vocabulary">
+              <Link to="/unit/vocabulary" className="each-unit">
                 {" "}
                 <img
                   src="https://placehold.co/600x400?text=Vocabulary 1"
                   alt="logo"
                   className="fish"
                 />
+                <span>Vocabulary 1</span>
               </Link>
 
-              <Link to="/unit/conversation-1">
+              <Link to="/unit/conversation-1" className="each-unit">
                 {" "}
                 <img
                   src="https://placehold.co/600x400?text=Conversation 1"
                   alt="logo"
                   className="fish"
                 />
+                <span>Conversation 1</span>
+              </Link>
+              <Link to="/unit/conversation-1" className="each-unit">
+                {" "}
+                <img
+                  src="https://placehold.co/600x400?text=Exercise 1"
+                  alt="logo"
+                  className="fish"
+                />
+                <span>Exercise 1</span>
               </Link>
             </div>
           </div>
@@ -77,6 +90,14 @@ const Unit = () => {
               <Link>
                 <img
                   src="https://placehold.co/600x400.png"
+                  alt="logo"
+                  className="fish"
+                />
+              </Link>
+              <Link to="/unit/conversation-1">
+                {" "}
+                <img
+                  src="https://placehold.co/600x400?text=Exercise 2"
                   alt="logo"
                   className="fish"
                 />
@@ -116,6 +137,14 @@ const Unit = () => {
                   className="fish"
                 />
               </Link>
+              <Link to="/unit/conversation-1">
+                {" "}
+                <img
+                  src="https://placehold.co/600x400?text=Exercise 3"
+                  alt="logo"
+                  className="fish"
+                />
+              </Link>
             </div>
           </div>
           <div className="insider-unit">
@@ -147,6 +176,14 @@ const Unit = () => {
               <Link>
                 <img
                   src="https://placehold.co/600x400?text=Conversation 4"
+                  alt="logo"
+                  className="fish"
+                />
+              </Link>
+              <Link to="/unit/conversation-1">
+                {" "}
+                <img
+                  src="https://placehold.co/600x400?text=Exercise 4"
                   alt="logo"
                   className="fish"
                 />
