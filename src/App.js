@@ -26,8 +26,8 @@ const App = () => {
         <Route path="fun-facts" element={<Culture />} />
         <Route path="exercise" element={<Exercise />} />
         <Route path="exercise/matching-pair" element={<MatchingPair />} />
-        <Route path="lessons" element={<Learn />} />
-        <Route path="learn/section-1" element={<Unit />} />
+        {/* <Route path="lessons" element={<Learn />} /> */}
+        <Route path="lessons" element={<Unit />} />
         <Route path="unit/consonants" element={<Consonants />} />
         <Route path="unit/vowels" element={<Vowels />} />
         <Route path="unit/vocabulary" element={<Vocabulary />} />
