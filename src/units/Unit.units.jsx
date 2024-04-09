@@ -30,16 +30,16 @@ const Unit = () => {
               <Link to="/unit/vocabulary">
                 {" "}
                 <img
-                  src="https://placehold.co/600x400?text=Vocabulary"
+                  src="https://placehold.co/600x400?text=Vocabulary 1"
                   alt="logo"
                   className="fish"
                 />
               </Link>
 
-              <Link to="/unit/conversation">
+              <Link to="/unit/conversation-1">
                 {" "}
                 <img
-                  src="https://placehold.co/600x400?text=Conversation"
+                  src="https://placehold.co/600x400?text=Conversation 1"
                   alt="logo"
                   className="fish"
                 />
@@ -54,14 +54,14 @@ const Unit = () => {
             <div className="small-insider-unit">
               <Link to="/daily-phrase">
                 <img
-                  src="https://placehold.co/600x400?text=Vocabulary"
+                  src="https://placehold.co/600x400?text=Vocabulary 2"
                   alt="logo"
                   className="fish"
                 />
               </Link>
-              <Link>
+              <Link to="/unit/conversation-2">
                 <img
-                  src="https://placehold.co/600x400?text=Conversation"
+                  src="https://placehold.co/600x400?text=Conversation 2"
                   alt="logo"
                   className="fish"
                 />
@@ -90,14 +90,14 @@ const Unit = () => {
             <div className="small-insider-unit">
               <Link>
                 <img
-                  src="https://placehold.co/600x400?text=Vocabulary"
+                  src="https://placehold.co/600x400?text=Vocabulary 3"
                   alt="logo"
                   className="fish"
                 />
               </Link>
               <Link>
                 <img
-                  src="https://placehold.co/600x400?text=Conversation"
+                  src="https://placehold.co/600x400?text=Conversation 3"
                   alt="logo"
                   className="fish"
                 />
@@ -139,14 +139,14 @@ const Unit = () => {
               </Link>
               <Link>
                 <img
-                  src="https://placehold.co/600x400?text=Vocabulary"
+                  src="https://placehold.co/600x400?text=Vocabulary 4"
                   alt="logo"
                   className="fish"
                 />
               </Link>
               <Link>
                 <img
-                  src="https://placehold.co/600x400?text=Conversation"
+                  src="https://placehold.co/600x400?text=Conversation 4"
                   alt="logo"
                   className="fish"
                 />

@@ -217,7 +217,7 @@ const Consonants = () => {
         ))}
       </div>
       <div className="consonants-title">
-        <h2>Consonant Subscript Form</h2>
+        <h2>Consonants with the Subscript Form</h2>
       </div>
       <div className="consonants-boxes">
         {consonants.map((item) => (
