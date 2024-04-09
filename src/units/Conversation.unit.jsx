@@ -12,10 +12,6 @@ const Conversation = ({ data }) => {
     }
   };
 
-  // const handleReset = () => {
-  //   setCurrentIndex(0);
-  // };
-
   const renderMessage = (studentData, className, index) => (
     <div className={className}>
       <p>{studentData[index].english}</p> <br />
@@ -57,30 +53,16 @@ const Conversation = ({ data }) => {
           />
         </div>
       </div>
-      {/* <div className="convo-people">
-        <div className="left-person">
-          <img src="../section-img/pngegg.png" alt="left-person" />
-        </div>
-        <div className="right-person">
-          <img src="" alt="right-person" />
-        </div>
-      </div> */}
 
       <div className="button-container">
-        <button
-          onClick={handleContinue}
-          disabled={
-            currentIndex >=
-            Math.min(data.student_a.length, data.student_b.length) - 1
-          }
-          className="button-7"
-        >
-          Continue
-        </button>
         {currentIndex >=
-          Math.min(data.student_a.length, data.student_b.length) - 1 && (
+        Math.min(data.student_a.length, data.student_b.length) - 1 ? (
           <button className="button-7" onClick={() => setCurrentIndex(0)}>
             Learn again
+          </button>
+        ) : (
+          <button className="button-7" onClick={handleContinue}>
+            Continue
           </button>
         )}
       </div>
