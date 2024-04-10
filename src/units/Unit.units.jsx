@@ -9,7 +9,7 @@ const Unit = () => {
         <div className="unit">
           <div className="insider-unit">
             <div className="small-insider-unit">
-              <h2>Unit 1</h2>
+              <h3>Unit 1</h3>
             </div>
             <div className="small-insider-unit">
               <Link to="/unit/consonants" className="each-unit">
@@ -62,7 +62,7 @@ const Unit = () => {
 
           <div className="insider-unit">
             <div className="small-insider-unit">
-              <h2>Unit 2</h2>
+              <h3>Unit 2</h3>
             </div>
             <div className="small-insider-unit">
               <Link to="/daily-phrase">
@@ -106,7 +106,7 @@ const Unit = () => {
           </div>
           <div className="insider-unit">
             <div className="small-insider-unit">
-              <h2>Unit 3</h2>
+              <h3>Unit 3</h3>
             </div>
             <div className="small-insider-unit">
               <Link>
