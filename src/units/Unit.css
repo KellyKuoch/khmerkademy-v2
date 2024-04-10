@@ -61,10 +61,17 @@
 }
 
 .fish {
-  width: 200px;
+  width: 100px;
   margin: 10px;
 }
 
 .title {
   width: 100%;
+}
+
+.each-unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

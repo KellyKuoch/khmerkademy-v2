@@ -1,0 +1,52 @@
+.convo-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+.convo-outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.convo-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: solid black 1px; */
+  /* background-color: antiquewhite;
+  border-radius: 10px;
+  margin: 80px;
+  padding: 5px; */
+}
+
+.convo-border {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  border-radius: 15px 15px 0px 15px;
+  margin: 80px;
+  padding: 5px;
+}
+
+.convo-img {
+  width: 300px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.convo-people {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 150px;
+}
