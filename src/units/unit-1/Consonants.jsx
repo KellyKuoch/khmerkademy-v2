@@ -214,8 +214,8 @@ const Consonants = () => {
       </div>
       <div className="consonants-boxes">
         {consonants.map((item) => (
-          <button
-            className="consonant"
+          <div
+            className="button-1"
             style={{ fontSize: "25px" }}
             onClick={() => setActiveConsonant(item)}
           >
@@ -224,7 +224,7 @@ const Consonants = () => {
             </span>
 
             <span>{item.pronoun}</span>
-          </button>
+          </div>
         ))}
       </div>
 
