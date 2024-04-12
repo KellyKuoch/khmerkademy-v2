@@ -3,7 +3,7 @@ const Vocabulary = ({ data }) => {
   return (
     <div className="vocab-main">
       <div className="english-main">
-        <h2>Vocabulary 1</h2>
+        <h2>Khmer Phrases List</h2>
         <div className="vocab-header">
           <div className="header-item">English</div>
           <div className="header-item">Khmer</div>

@@ -28,17 +28,15 @@ const Unit = () => {
                 />
                 <span>Vowel</span>
               </Link>
-
-              <Link to="/unit/vocabulary" className="each-unit">
+              <Link to="/unit/basic-phrase-1" className="each-unit">
                 {" "}
                 <img
-                  src="https://placehold.co/600x400?text=Vocabulary 1"
+                  src="https://placehold.co/600x400?text=Basic Phrases"
                   alt="logo"
                   className="fish"
                 />
-                <span>Vocabulary 1</span>
+                <span>Basic Phrase</span>
               </Link>
-
               <Link to="/unit/conversation-1" className="each-unit">
                 {" "}
                 <img
@@ -47,15 +45,15 @@ const Unit = () => {
                   className="fish"
                 />
                 <span>Conversation 1</span>
-              </Link>
-              <Link to="/unit/conversation-1" className="each-unit">
+              </Link>{" "}
+              <Link to="/unit/vocabulary-1" className="each-unit">
                 {" "}
                 <img
-                  src="https://placehold.co/600x400?text=Exercise 1"
+                  src="https://placehold.co/600x400?text=Phrases List"
                   alt="logo"
                   className="fish"
                 />
-                <span>Exercise 1</span>
+                <span>Phrases List</span>
               </Link>
             </div>
           </div>
@@ -74,7 +72,7 @@ const Unit = () => {
               </Link>
               <Link to="/unit/conversation-2">
                 <img
-                  src="https://placehold.co/600x400?text=Conversation 2"
+                  src="https://placehold.co/600x400?text=Conversation+2"
                   alt="logo"
                   className="fish"
                 />
@@ -89,7 +87,7 @@ const Unit = () => {
 
               <Link>
                 <img
-                  src="https://placehold.co/600x400.png"
+                  src="https://placehold.co/600x400?text=Number"
                   alt="logo"
                   className="fish"
                 />

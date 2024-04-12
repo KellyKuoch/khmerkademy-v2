@@ -207,13 +207,13 @@ const Consonants = () => {
       </div>
       <div className="consonants-boxes">
         {consonants.map((item) => (
-          <div className="consonant" style={{ fontSize: "25px" }}>
-            <p>
+          <button className="consonant" style={{ fontSize: "25px" }}>
+            <span>
               <strong>{item.name}</strong>
-            </p>
+            </span>
 
-            <p>{item.pronoun}</p>
-          </div>
+            <span>{item.pronoun}</span>
+          </button>
         ))}
       </div>
       <div className="consonants-title">
@@ -221,13 +221,13 @@ const Consonants = () => {
       </div>
       <div className="consonants-boxes">
         {consonants.map((item) => (
-          <div className="consonant" style={{ fontSize: "25px" }}>
-            <p>
+          <button className="consonant" style={{ fontSize: "25px" }}>
+            <span>
               <strong>{item.name}</strong>
-            </p>
-            <p>{item.subScript}</p>
-            <p>{item.pronoun}</p>
-          </div>
+            </span>
+            <span>{item.subScript}</span>
+            <span>{item.pronoun}</span>
+          </button>
         ))}
       </div>
     </div>
