@@ -1,5 +1,12 @@
+import { useState } from "react";
 import "./Consonants.css";
+import Modal from "../../PopUp/PopUpModal";
 const Consonants = () => {
+  const [activeConsonant, setActiveConsonant] = useState(null);
+  const popupStyle = activeConsonant
+    ? { display: "block" }
+    : { display: "none" };
+
   const consonants = [
     {
       id: 1,
@@ -207,7 +214,11 @@ const Consonants = () => {
       </div>
       <div className="consonants-boxes">
         {consonants.map((item) => (
-          <button className="consonant" style={{ fontSize: "25px" }}>
+          <button
+            className="consonant"
+            style={{ fontSize: "25px" }}
+            onClick={() => setActiveConsonant(item)}
+          >
             <span>
               <strong>{item.name}</strong>
             </span>
@@ -216,7 +227,44 @@ const Consonants = () => {
           </button>
         ))}
       </div>
-      <div className="consonants-title">
+
+      {/* Consonant Modal */}
+      <div className="popup" style={popupStyle}>
+        {activeConsonant && (
+          <Modal
+            show={Boolean(activeConsonant)}
+            onClose={() => setActiveConsonant(null)}
+          >
+            <div className="main-popup">
+              <div className="garden-content">
+                <div className="picture">
+                  <img
+                    src={`../consonant-img/con${activeConsonant.id}.png`}
+                    alt="small-img"
+                    className="popup-img"
+                  ></img>
+                </div>
+              </div>
+              <div className="garden-care">
+                <div className="garden-care-header">
+                  <div className="care-guide">
+                    <div className="button-8">Write</div>
+                  </div>
+                  <div className="pic">
+                    <div className="button-8">Picture</div>
+                  </div>
+                </div>
+                <div className="garden-care-content">
+                  <h3>This is an active component</h3>
+                  <p>{activeConsonant.name}</p>
+                </div>
+              </div>
+            </div>
+          </Modal>
+        )}
+      </div>
+
+      {/* <div className="consonants-title">
         <h2>Consonants with its Subscript Form</h2>
       </div>
       <div className="consonants-boxes">
@@ -229,7 +277,7 @@ const Consonants = () => {
             <span>{item.pronoun}</span>
           </button>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
