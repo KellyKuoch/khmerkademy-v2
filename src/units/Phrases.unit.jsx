@@ -18,7 +18,7 @@ const Phrases = ({ data }) => {
         <div key={currentPhrase.id} className="each-phrase">
           <div className="main-item">
             <span>{currentPhrase.word}</span>
-            <button className="button-8">Hear it loud</button>
+            <button className="button-8">Hear it</button>
           </div>
           <div className="phrase-item">
             {" "}
