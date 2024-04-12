@@ -14,16 +14,16 @@ const Conversation = ({ data }) => {
 
   const renderMessage = (studentData, className, index) => (
     <div className={className}>
-      <p>{studentData[index].english}</p> <br />
-      <p>
+      <span>{studentData[index].english}</span> <br />
+      <span>
         <strong>Khmer: </strong>
         {studentData[index].khmer}
-      </p>{" "}
+      </span>{" "}
       <br />
-      <p>
+      <span>
         <strong>Phonetic: </strong>
         {studentData[index].phonetic}
-      </p>
+      </span>
     </div>
   );
 
