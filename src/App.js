@@ -5,7 +5,6 @@ import Homepage from "./components/Homepage.component";
 import Exercise from "./components/Exercises.component";
 import DailyPhrase from "./components/DailyPhrase.component";
 import MatchingPair from "./content/MatchingPair.content";
-import Learn from "./content/Learn.content";
 import Profile from "./authentication/Profile.authentication";
 import Unit from "./units/Unit.units";
 import Culture from "./culture-topic/Culture.culture-topic";
@@ -14,9 +13,12 @@ import Culture from "./culture-topic/Culture.culture-topic";
 import Consonants from "./units/unit-1/Consonants";
 import Vowels from "./units/unit-1/Vowels";
 import OneConversation from "./units/unit-1/OneConversation";
-import TwoConversation from "./units/unit-2/TwoConversation";
+import TwoConversation from "./units/unit-2/TwoConversation.unit2";
 import OneVocabulary from "./units/unit-1/OneVocabulary";
 import OnePhrases from "./units/unit-1/OnePhrases.unit1";
+import TwoVocabulary from "./units/unit-2/TwoVocabulary";
+import TwoPhrases from "./units/unit-2/TwoPhrases.unit2";
+import Number from "./units/unit-2/Number.unit-2";
 
 const App = () => {
   return (
@@ -33,7 +35,10 @@ const App = () => {
         <Route path="unit/consonants" element={<Consonants />} />
         <Route path="unit/vowels" element={<Vowels />} />
         <Route path="unit/basic-phrase-1" element={<OnePhrases />} />
+        <Route path="unit/basic-phrase-2" element={<TwoPhrases />} />
         <Route path="unit/vocabulary-1" element={<OneVocabulary />} />
+        <Route path="unit/vocabulary-2" element={<TwoVocabulary />} />
+        <Route path="unit/number" element={<Number />} />
         <Route path="unit/conversation-1" element={<OneConversation />} />
         <Route path="unit/conversation-2" element={<TwoConversation />} />
         <Route path="profile" element={<Profile />} />

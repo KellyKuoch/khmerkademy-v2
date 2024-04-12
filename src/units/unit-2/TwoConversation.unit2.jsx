@@ -1,5 +1,5 @@
 import Conversation from "../Conversation.unit";
-import twoConversation from "./oneConvoB.json";
+import twoConversation from "./twoConversation.json";
 const TwoConversation = () => {
   return (
     <div className="">

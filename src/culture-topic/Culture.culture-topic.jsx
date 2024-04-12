@@ -103,7 +103,7 @@ const Culture = () => {
               <p>{item.article}</p>
 
               <div
-                className="button-7"
+                className="button-8"
                 onClick={() => {
                   console.log("Opening article: ", item);
                   setActiveArticle(item);

@@ -63,9 +63,9 @@ const Unit = () => {
               <h3>Unit 2</h3>
             </div>
             <div className="small-insider-unit">
-              <Link to="/daily-phrase">
+              <Link to="/unit/basic-phrase-2">
                 <img
-                  src="https://placehold.co/600x400?text=Vocabulary 2"
+                  src="https://placehold.co/600x400?text=Basic+Phrase"
                   alt="logo"
                   className="fish"
                 />
@@ -85,7 +85,7 @@ const Unit = () => {
                 />
               </Link>
 
-              <Link>
+              <Link to="/unit/number">
                 <img
                   src="https://placehold.co/600x400?text=Number"
                   alt="logo"

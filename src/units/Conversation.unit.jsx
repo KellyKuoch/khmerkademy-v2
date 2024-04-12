@@ -57,11 +57,11 @@ const Conversation = ({ data }) => {
       <div className="button-container">
         {currentIndex >=
         Math.min(data.student_a.length, data.student_b.length) - 1 ? (
-          <button className="button-7" onClick={() => setCurrentIndex(0)}>
+          <button className="button-8" onClick={() => setCurrentIndex(0)}>
             Learn again
           </button>
         ) : (
-          <button className="button-7" onClick={handleContinue}>
+          <button className="button-8" onClick={handleContinue}>
             Continue
           </button>
         )}

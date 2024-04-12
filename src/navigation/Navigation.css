@@ -47,3 +47,10 @@
 .navigation .nav-links-container .nav-link:hover {
   color: #ff8080;
 }
+
+.profile-container img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}

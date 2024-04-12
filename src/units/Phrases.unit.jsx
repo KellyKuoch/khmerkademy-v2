@@ -18,7 +18,7 @@ const Phrases = ({ data }) => {
         <div key={currentPhrase.id} className="each-phrase">
           <div className="main-item">
             <span>{currentPhrase.word}</span>
-            <button className="button-7">Hear it loud</button>
+            <button className="button-8">Hear it loud</button>
           </div>
           <div className="phrase-item">
             {" "}
@@ -32,11 +32,11 @@ const Phrases = ({ data }) => {
         </div>
         <div className="button-container">
           {currentIndex >= Math.min(data.greeting.length) - 1 ? (
-            <button className="button-7" onClick={() => setCurrentIndex(0)}>
+            <button className="button-8" onClick={() => setCurrentIndex(0)}>
               Learn again
             </button>
           ) : (
-            <button className="button-7" onClick={showNext}>
+            <button className="button-8" onClick={showNext}>
               Continue
             </button>
           )}

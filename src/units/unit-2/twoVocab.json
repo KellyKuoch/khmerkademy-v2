@@ -1,0 +1,28 @@
+{
+    "greeting": [
+    {"id": 1, "word": "កូនស្រី", "english": "Daughter", "phonetic": ""},
+    {"id": 2, "word": "កូនប្រុស", "english": "Kon Bros", "phonetic": ""},
+    {"id": 3, "word": "បងស្រី / ប្អូនស្រី", "english": "Bong Srei / Paoun srei", "phonetic": ""},
+    {"id": 4, "word": "បងប្រុស / ប្អូនប្រុស", "english": "Bong Bros / Paoun bros", "phonetic": ""},
+    {"id": 5, "word": "ទារក", "english": "Tea rork", "phonetic": ""},
+    {"id": 6, "word": "ក្មេង(ប្រុស)", "english": "Khmeng (bros)", "phonetic": ""},
+    {"id": 7, "word": "ក្មេង(ស្រី)", "english": "Khmeng (srei)", "phonetic": ""},
+    {"id": 8, "word": "ឳពុក", "english": "Auo Pouk", "phonetic": ""},
+    {"id": 9, "word": "ម្តាយ", "english": "Mdaay", "phonetic": ""},
+    {"id": 10, "word": "ប្តី / ស្វាមី", "english": "Btei / Svamei", "phonetic": ""},
+    {"id": 11, "word": "ភរិយា / ប្រពន្ធ", "english": "Phriyea / Braponth", "phonetic": ""},
+    {"id": 12, "word": "បងប្អូនជីដូនមួួយ(ប្រុស)", "english": "Bong Paoun chidaun muoy (bros)", "phonetic": ""},
+    {"id": 13, "word": "បងប្អូនជីដូនមួួយ(ស្រី)", "english": "Bong Paoun chidaun muoy (srei)", "phonetic": ""},
+    {"id": 14, "word": "មីង", "english": "Ming", "phonetic": ""},
+    {"id": 15, "word": "ពូ", "english": "Pou", "phonetic": ""},
+    {"id": 16, "word": "ជីតា", "english": "Chita", "phonetic": ""},
+    {"id": 17, "word": "ជីដូន", "english": "Chidaun", "phonetic": ""},
+    {"id": 18, "word": "ក្មួយប្រុស", "english": "Khmuoy Bros", "phonetic": ""},
+    {"id": 19, "word": "ក្មួយស្រី", "english": "Khmuoy Srei", "phonetic": ""},
+    {"id": 20, "word": "បុរស", "english": "Boroas", "phonetic": ""},
+    {"id": 21, "word": "ស្ត្រី", "english": "Strei", "phonetic": ""},
+    {"id": 22, "word": "កេ្មងប្រុស", "english": "Khmeng broas", "phonetic": ""},
+    {"id": 23, "word": "កេ្មងស្រី", "english": "Khmeng srei", "phonetic": ""},
+    {"id": 24, "word": "ប្រជាពលរដ្ឋ / ប្រជាជន", "english": "Brachea pol rath / Brachea Chan", "phonetic": ""}
+]
+}
