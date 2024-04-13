@@ -1,7 +1,12 @@
+import "./Figure.css";
 const Figure = () => {
   return (
-    <div>
-      <h3>This is the Figure component</h3>
+    <div className="main-figure">
+      <img
+        src="https://placehold.co/600x400.png"
+        alt="consonant-img"
+        className="left-figure-img"
+      />
     </div>
   );
 };
