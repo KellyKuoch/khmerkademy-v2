@@ -2,12 +2,16 @@ import "./PopUp.css";
 const Modal = ({ show, onClose, children }) => {
   if (!show) return null;
   const handleBackdropClick = (e) => {
-    onClose();
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
   };
 
   return (
     <div className="modal" onClick={handleBackdropClick}>
-      <div className="modal-content">{children}</div>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        {children}
+      </div>
     </div>
   );
 };
