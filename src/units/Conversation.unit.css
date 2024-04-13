@@ -18,11 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: solid black 1px; */
-  /* background-color: antiquewhite;
-  border-radius: 10px;
-  margin: 80px;
-  padding: 5px; */
+ 
 }
 
 .convo-border {
@@ -30,9 +26,11 @@
   flex-direction: column;
   background-color: antiquewhite;
   border-radius: 15px 15px 0px 15px;
-  margin: 80px;
-  padding: 5px;
+  margin: 40px;
+  padding: 20px;
 }
+
+
 
 .convo-img {
   width: 300px;

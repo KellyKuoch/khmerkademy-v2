@@ -1,0 +1,40 @@
+{
+  "student_a": [
+    {
+      "khmer": "តើអ្នកមានបងប្អូនប៉ុន្មាននាក់?",
+      "phonetic": "ter neak mean bong paoun pun marn neak?",
+      "english": "How many brother and sister do you have?"
+    },
+    {
+      "khmer": "ខ្ញុំមានបងប្អូន២នាក់។ ខ្ញុំមានប្អូនប្រុសម្នាក់ហើយខ្ញុំជាកូនច្បង",
+      "phonetic": "Khnom mean bong paoun 2 nak. khnom mean paoun bros maneak hauy khnom chea kon jabong",
+      "english": "I have 2 siblings. I have a younger brother and I am the oldest."
+    },
+    {
+      "khmer": "ប៉ារបស់ខ្ញុំជាមេធាវី ហើយចំណែកឯម៉ាក់របស់ខ្ញុំជាគ្រូបង្រៀន។",
+      "phonetic": "Pa robos khnom chea metheavy hauy chomnaek eu mak robos khnom chea kru bongrean.",
+      "english": "My dad is a lawyer and my mom is a teacher."
+    },
+    {
+      "khmer": "ពិតជាចែដន្យមែន។",
+      "phonetic": "pit chea osja man.",
+      "english": "That's great."
+    }
+  ],
+  "student_b": [
+    {
+      "khmer": "ខ្ញុំមានបងប្អូន៤នាក់។ បងស្រី២នាក់និងបងប្រុស១នាក់។ ចុះអ្នកវិញ?","phonetic": "khnom mean bong paoun 4 neak. Bong srey 2 neak neng bong bros 1 neak. jos neak vinh?", 
+      "english": "I have 4 siblings. 2 older sisters and 1 older brother. How about you?" 
+    },
+    {
+      "khmer": "តើប៉ាម៉ាក់របស់អ្នកប្រកបមុខរបរអ្វី? (តើប៉ាម៉ាក់របស់អ្នកធ្វើអី)", 
+      "phonetic": "Ter pa mak robous neak brokorb muk robour avey? (ter pa mak robous neak tver ey?",
+      "english": "What do your parents do?"
+    },
+    {
+      "khmer": "ពិតមែនរឺ? ម៉ាក់របស់ខ្ញុំក៏ជាគ្រូបង្រៀនដែរ។", 
+      "phonetic": "Pit man reu? Mak robous khnom kor chea kru bongrean dae.", 
+      "english": "Really? My mom is a teacher too. "
+    }
+  ]
+}

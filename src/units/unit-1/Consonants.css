@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 80px;
+    padding-bottom: 30px;
 }
 
 .consonants-boxes {
@@ -26,3 +27,94 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.main-popup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+}
+  
+  
+  .garden-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: solid 1px; */
+    padding: 2px;
+  }
+  
+  .popup-img {
+    width: 200px;
+  }
+  
+  .garden-care {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: solid 1px; */
+    padding: 2px;
+    width: 300px;
+    height: 250px;
+  }
+  
+  .garden-care-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* border: solid 1px; */
+    padding: 5px;
+    width: 90%;
+  }
+  
+  .garden-care-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: solid 1px; */
+    border-radius: 10px;
+    background-color: #f1eedc;
+    padding: 5px;
+    height: 300px;
+    width: 95%;
+  }
+  
+  .button-1 {
+    
+    background-color: #E5DDC5;
+    border: solid black 1px;
+    border-radius: 5px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+      sans-serif;
+    
+  
+    padding: 8px 0.8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+  }
+  
+  .button-1:hover,
+  .button-1:focus {
+    background-color: #F0EBE3;
+    cursor: pointer;
+  }
+  
+  .button-1:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+  }

@@ -1,0 +1,47 @@
+{
+  "greeting": [
+    { "id": 1, "word": "សួស្ដី", "english": "Hello", "phonetic": "suosdei" },
+    {
+      "id": 2,
+      "word": "អរុណសួស្ដី",
+      "english": "Good morning",
+      "phonetic": "aroun suosdei"
+    },
+    {
+      "id": 3,
+      "word": "ទិវាសួស្ដី",
+      "english": "Good afternoon",
+      "phonetic": "tivea souosdei"
+    },
+    {
+      "id": 4,
+      "word": "សាយ័ន្ដសួស្ដី",
+      "english": "Good evening",
+      "phonetic": "sa yand suosdei"
+    },
+    {
+      "id": 5,
+      "word": "សូម​ស្វាគមន៍",
+      "english": "Welcome!",
+      "phonetic": "saum svakom"
+    },
+    {
+      "id": 6,
+      "word": "តើឯងសុខសប្បាយទេ? (មិត្តភ័ក្ដិ)",
+      "english": "How are you? (friendly)",
+      "phonetic": "Tae eng sokhsabbay te?"
+    },
+    {
+      "id": 7,
+      "word": "តើអ្នកសុខសប្បាយទេ? (ពាក្យគួរសម)",
+      "english": "How are you? (polite)",
+      "phonetic": "Tae nak sokhsabbay te?"
+    },
+    {
+      "id": 8,
+      "word": "ញុំសុខសប្បាយជាទេ អរគុណ!",
+      "english": "I'm good, thank you!",
+      "phonetic": "knhom sokhsabbay chea te. Orkun"
+    }
+  ]
+}

@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px; /* Adjusted gap */
-  background-color: #FBF8DD;
+  background-color: #b5c0d0;
   border-radius: 10px;
   width: 900px;
   padding: 25px;
@@ -24,7 +24,7 @@
   width: 800px; /* Same as .each-english */
   padding: 10px;
   border-radius: 10px;
-  background-color: #F0E5D6; /* Slightly different color for header */
+  background-color: #b4b4b8; /* Slightly different color for header */
   font-weight: bold; /* Bold header text */
   text-align: center;
 }
@@ -35,11 +35,13 @@
   justify-content: space-between;
   width: 800px;
   padding: 10px;
+  border: 2px solid black;
   border-radius: 10px;
-  background-color: #E5DDC5;
+  background-color: #fff;
 }
 
-.header-item, .vocab-item {
+.header-item,
+.vocab-item {
   flex: 1;
   text-align: center;
   /* Additional styling as needed */

@@ -7,10 +7,10 @@ export default function App() {
         <div className="left-top">
           <h2>Learn a language for free. Forever</h2>
           <div className="button-row">
-            <Link to="/learn/section-1" className="button-7">
+            <Link to="/learn/section-1" className="button-8">
               Log In
             </Link>
-            <Link to="/learn/section-1" className="button-7">
+            <Link to="/learn/section-1" className="button-8">
               Sign Up
             </Link>
           </div>
@@ -67,7 +67,7 @@ export default function App() {
         <div className="decriptions">
           <h2>Welcome to KhmerKademy</h2>
           <p>Your new language learning journey starts here</p>
-          <Link to="/learn/section-1" className="button-7">
+          <Link to="/learn/section-1" className="button-8">
             Sign Up
           </Link>
         </div>
