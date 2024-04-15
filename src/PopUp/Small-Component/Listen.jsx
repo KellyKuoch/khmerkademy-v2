@@ -7,9 +7,11 @@ const Listen = ({ activeConsonant }) => {
   );
 
   return (
-    <div>
-      <h3>Audio container</h3>
-      <button onClick={playSound}>Play Audio</button>
+    <div className="audio-container">
+      <h3>Learn how to pronoun it correctly</h3>
+      <button className="button-8" onClick={playSound}>
+        Play
+      </button>
     </div>
   );
 };

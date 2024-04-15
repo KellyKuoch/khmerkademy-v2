@@ -19,6 +19,7 @@ import OnePhrases from "./units/unit-1/OnePhrases.unit1";
 import TwoVocabulary from "./units/unit-2/TwoVocabulary";
 import TwoPhrases from "./units/unit-2/TwoPhrases.unit2";
 import Number from "./units/unit-2/Number.unit-2";
+import Grammar from "./units/unit-2/Grammar";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="unit/number" element={<Number />} />
         <Route path="unit/conversation-1" element={<OneConversation />} />
         <Route path="unit/conversation-2" element={<TwoConversation />} />
+        <Route path="unit/grammar-1" element={<Grammar />} />
         <Route path="profile" element={<Profile />} />
       </Route>
     </Routes>
