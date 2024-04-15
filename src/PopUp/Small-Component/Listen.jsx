@@ -1,7 +1,10 @@
 import useSound from "use-sound";
 
-const Listen = () => {
-  const [playSound] = useSound("../audio/con1.mp3");
+const Listen = ({ activeConsonant }) => {
+  // const [playSound] = useSound("../audio/consonants/con1.mp3");
+  const [playSound] = useSound(
+    `../audio/consonants/con${activeConsonant.id}.mp3`
+  );
 
   return (
     <div>
