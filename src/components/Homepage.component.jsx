@@ -17,7 +17,7 @@ export default function App() {
         </div>
         <img
           className="image-class"
-          src="https://placehold.co/600x400.png"
+          src="./img/angkor-homepage.jpg"
           alt="top-pic"
         />
       </div>
@@ -27,7 +27,7 @@ export default function App() {
           <div className="lesson-container">
             <img
               className="image-small"
-              src="https://placehold.co/600x400.png"
+              src="./img/cambodia-convo.jpg"
               alt="small-pic"
             />
             <h3>Personalized Learning</h3>
@@ -35,7 +35,7 @@ export default function App() {
           <div className="lesson-container">
             <img
               className="image-small"
-              src="https://placehold.co/600x400.png"
+              src="./img/cambodia-improve.jpg"
               alt="small-pic"
             />
             <h3>Improve Quickly</h3>
@@ -43,7 +43,7 @@ export default function App() {
           <div className="lesson-container">
             <img
               className="image-small"
-              src="https://placehold.co/600x400.png"
+              src="./img/stay-motivated.jpg"
               alt="small-pic"
             />
             <h3>Stay Motivated</h3>
@@ -51,7 +51,7 @@ export default function App() {
           <div className="lesson-container">
             <img
               className="image-small"
-              src="https://placehold.co/600x400.png"
+              src="./img/khmer-language.png"
               alt="small-pic"
             />
             <h3>New Lesson Every Week</h3>
@@ -59,11 +59,7 @@ export default function App() {
         </div>
       </div>
       <div className="footer-container">
-        <img
-          className="image-class"
-          src="https://placehold.co/600x400.png"
-          alt=""
-        />
+        <img className="image-class" src="./img/khmer-language.png" alt="" />
         <div className="decriptions">
           <h2>Welcome to KhmerKademy</h2>
           <p>Your new language learning journey starts here</p>
@@ -74,8 +70,8 @@ export default function App() {
       </div>
       <div className="footer-container">
         <div className="decriptions">
-          <h2>Welcome to KhmerKademy</h2>
-          <p>Your new language learning journey starts here</p>
+          <h2>Learn about Cambodia rich culture</h2>
+          <p>Explore events and celebration in Cambodia</p>
         </div>
         <img
           className="image-class"
