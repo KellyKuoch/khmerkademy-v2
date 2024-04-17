@@ -1,6 +1,6 @@
 import "./Phrases.css";
 import { useState } from "react";
-const Phrases = ({ data }) => {
+const Phrases = ({ data, printTest, incrementScore, score, setScore }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const showNext = () => {
@@ -15,6 +15,8 @@ const Phrases = ({ data }) => {
     <div className="phrases-main">
       <div className="phrases-title">
         <h2>Basic Phrases</h2>
+        {/* <h2>{score}</h2> */}
+        <progress value={score} max={data.greeting.length - 1} />
         <div key={currentPhrase.id} className="each-phrase">
           <div className="main-item">
             <span>{currentPhrase.word}</span>
@@ -32,11 +34,24 @@ const Phrases = ({ data }) => {
         </div>
         <div className="button-container">
           {currentIndex >= Math.min(data.greeting.length) - 1 ? (
-            <button className="button-8" onClick={() => setCurrentIndex(0)}>
+            <button
+              className="button-8"
+              onClick={() => {
+                setCurrentIndex(0);
+                setScore(0);
+              }}
+            >
               Learn again
             </button>
           ) : (
-            <button className="button-8" onClick={showNext}>
+            <button
+              className="button-8"
+              onClick={() => {
+                showNext();
+                printTest();
+                incrementScore(1);
+              }}
+            >
               Continue
             </button>
           )}
