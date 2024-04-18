@@ -92,7 +92,7 @@ const Unit = () => {
                   className="fish"
                 />
               </Link>
-              <Link to="/unit/conversation-1">
+              <Link to="/exercise/fill-the-blank">
                 {" "}
                 <img
                   src="https://placehold.co/600x400?text=Exercise 2"
