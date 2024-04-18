@@ -1,5 +1,6 @@
 import "./Phrases.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Phrases = ({ data, printTest, incrementScore, score, setScore }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,15 +35,20 @@ const Phrases = ({ data, printTest, incrementScore, score, setScore }) => {
         </div>
         <div className="button-container">
           {currentIndex >= Math.min(data.greeting.length) - 1 ? (
-            <button
-              className="button-8"
-              onClick={() => {
-                setCurrentIndex(0);
-                setScore(0);
-              }}
-            >
-              Learn again
-            </button>
+            <>
+              <button
+                className="button-8"
+                onClick={() => {
+                  setCurrentIndex(0);
+                  setScore(0);
+                }}
+              >
+                Learn again
+              </button>{" "}
+              <Link to="/lessons" className="each-unit">
+                <button className="button-8">Back to Lessons</button>{" "}
+              </Link>
+            </>
           ) : (
             <button
               className="button-8"
