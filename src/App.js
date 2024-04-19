@@ -20,6 +20,7 @@ import Number from "./units/unit-2/Number.unit-2";
 import Grammar from "./units/unit-2/Grammar";
 import { useEffect, useState } from "react";
 import FillTheBlank from "./content/FillTheBlank";
+import Flashcard from "./content/Flashcard";
 
 const App = ({ initialScore = 0, onScoreChange }) => {
   const [score, setScore] = useState(initialScore);
@@ -46,6 +47,7 @@ const App = ({ initialScore = 0, onScoreChange }) => {
         <Route path="fun-facts" element={<Culture />} />
         <Route path="exercise" element={<Exercise />} />
         <Route path="exercise/fill-the-blank" element={<FillTheBlank />} />
+        <Route path="exercise/flashcard" element={<Flashcard />} />
         <Route
           path="exercise/matching-pair"
           element={
