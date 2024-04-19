@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./navigation/Navigation";
 import Homepage from "./components/Homepage.component";
-import Exercise from "./components/Exercises.component";
+// import Exercise from "./components/Exercises.component";
 import DailyPhrase from "./components/DailyPhrase.component";
 import MatchingPair from "./content/MatchingPair.content";
 import Profile from "./authentication/Profile.authentication";
@@ -45,7 +45,7 @@ const App = ({ initialScore = 0, onScoreChange }) => {
         <Route path="home" element={<Homepage />} />
         <Route path="daily-phrase" element={<DailyPhrase />} />
         <Route path="fun-facts" element={<Culture />} />
-        <Route path="exercise" element={<Exercise />} />
+        {/* <Route path="exercise" element={<Exercise />} /> */}
         <Route path="exercise/fill-the-blank" element={<FillTheBlank />} />
         <Route path="exercise/flashcard" element={<Flashcard />} />
         <Route
