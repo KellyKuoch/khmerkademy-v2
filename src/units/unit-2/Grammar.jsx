@@ -4,7 +4,7 @@ const Grammar = () => {
     <div className="main-grammar">
       <div className="first-grammar">
         <div className="grammar-title">
-          <h2>Grammar Part 1</h2>
+          <h2>Basic Form</h2>
         </div>
         <div className="grammar-pics">
           <img
@@ -107,20 +107,6 @@ const Grammar = () => {
               <strong>Object: </strong> ឡាន (car) <br />
               <strong>Adjective: </strong> ពណ៍ក្រហម (red) <br />
               <strong>Article: </strong> មួយ (a) <br />
-            </span>
-
-            <span>
-              <strong>Another example: </strong>ខ្ញុំញុំាបន្លែ (Khnom nham
-              bonlae.)
-            </span>
-            <span>
-              <strong></strong>I eat vegetables.
-            </span>
-            <span>
-              <strong>Subject: </strong> ខ្ញុំ (I)
-              <br />
-              <strong>Verb: </strong> ញុំា (eat) <br />
-              <strong>Object: </strong> បន្លែ (vegetables)
             </span>
           </div>
         </div>
