@@ -1,9 +1,9 @@
 import "./Figure.css";
-const Figure = () => {
+const Figure = ({ activeConsonant }) => {
   return (
     <div className="main-figure">
       <img
-        src="https://placehold.co/600x400.png"
+        src={`../alphabet-img/pic${activeConsonant.id}.png`}
         alt="consonant-img"
         className="left-figure-img"
       />

@@ -77,7 +77,7 @@ const Unit = () => {
                   className="fish"
                 />
               </Link>
-              <Link>
+              <Link to="/unit/grammar-1">
                 <img
                   src="https://placehold.co/600x400?text=Grammar+(Verb)"
                   alt="logo"
@@ -92,7 +92,7 @@ const Unit = () => {
                   className="fish"
                 />
               </Link>
-              <Link to="/unit/conversation-1">
+              <Link to="/exercise/fill-the-blank">
                 {" "}
                 <img
                   src="https://placehold.co/600x400?text=Exercise 2"
@@ -135,7 +135,7 @@ const Unit = () => {
                   className="fish"
                 />
               </Link>
-              <Link to="/unit/conversation-1">
+              <Link to="/exercise/flashcard">
                 {" "}
                 <img
                   src="https://placehold.co/600x400?text=Exercise 3"

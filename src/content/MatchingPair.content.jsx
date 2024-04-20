@@ -41,10 +41,9 @@ const questions = [
     ],
     answer: "មនុស្សស្រី",
   },
-  
 ];
 
-const MatchingPair = () => {
+const MatchingPair = ({ incrementScore, setScore, score }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -63,12 +62,8 @@ const MatchingPair = () => {
   };
 
   if (currentQuestionIndex === -1) {
-    return (
-      <div className="congratulations">
-        {" "}
-        Congratulations!
-      </div>
-    );
+    setScore = 0;
+    return <div className="congratulations"> Congratulations!</div>;
   }
 
   return (
@@ -80,13 +75,17 @@ const MatchingPair = () => {
           <button
             className="button-93"
             key={option.text}
-            onClick={() => handleOptionClick(option.text)}
+            onClick={() => {
+              handleOptionClick(option.text);
+              incrementScore(1);
+            }}
           >
             {option.text}
             {"\n"} {option.phonetic}
           </button>
         ))}
       </div>
+      <progress value={score} max={questions.length} />
     </div>
   );
 };
