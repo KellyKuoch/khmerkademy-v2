@@ -21,6 +21,8 @@ import Grammar from "./units/unit-2/Grammar";
 import { useEffect, useState } from "react";
 import FillTheBlank from "./content/FillTheBlank";
 import Flashcard from "./content/Flashcard";
+import ThreeGrammar from "./units/unit-3/ThreeGrammar";
+import ThreePhrases from "./units/unit-3/ThreePhrases.unit3";
 
 const App = ({ initialScore = 0, onScoreChange }) => {
   const [score, setScore] = useState(initialScore);
@@ -84,12 +86,25 @@ const App = ({ initialScore = 0, onScoreChange }) => {
             />
           }
         />
+        <Route
+          path="unit/basic-phrase-3"
+          element={
+            <ThreePhrases
+              printTest={printTest}
+              incrementScore={incrementScore}
+              score={score}
+              setScore={setScore}
+            />
+          }
+        />
         <Route path="unit/vocabulary-1" element={<OneVocabulary />} />
         <Route path="unit/vocabulary-2" element={<TwoVocabulary />} />
         <Route path="unit/number" element={<Number />} />
         <Route path="unit/conversation-1" element={<OneConversation />} />
         <Route path="unit/conversation-2" element={<TwoConversation />} />
+        <Route path="unit/conversation-3" element={<TwoConversation />} />
         <Route path="unit/grammar-1" element={<Grammar />} />
+        <Route path="unit/grammar-3" element={<ThreeGrammar />} />
         <Route path="profile" element={<Profile />} />
       </Route>
     </Routes>
