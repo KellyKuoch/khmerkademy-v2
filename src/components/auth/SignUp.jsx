@@ -50,7 +50,7 @@ const SignUp = () => {
               value={signUpEmail}
               onChange={(e) => setSignUpEmail(e.target.value)}
             ></input>
-            <div className="underline"></div>
+            {/* <div className="underline"></div> */}
           </div>
           <div className="input-box">
             <input
@@ -59,7 +59,7 @@ const SignUp = () => {
               value={signUpPassword}
               onChange={(e) => setSignUpPassword(e.target.value)}
             ></input>
-            <div className="underline"></div>
+            {/* <div className="underline"></div> */}
           </div>
           <div className="input-box button">
             <button className="button-8" type="submit">
@@ -78,7 +78,7 @@ const SignUp = () => {
               value={signInEmail}
               onChange={(e) => setSignInEmail(e.target.value)}
             ></input>
-            <div className="underline"></div>
+            {/* <div className="underline"></div> */}
           </div>
           <div className="input-box">
             <input
@@ -87,7 +87,7 @@ const SignUp = () => {
               value={signInPassword}
               onChange={(e) => setSignInPassword(e.target.value)}
             ></input>
-            <div className="underline"></div>
+            {/* <div className="underline"></div> */}
           </div>
           <div className="input-box button">
             <button className="button-8" type="submit">
