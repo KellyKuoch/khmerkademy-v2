@@ -1,11 +1,33 @@
 import { Fragment, useContext } from "react";
+import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./Navigation.css";
+import { auth } from "../firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 // import { signOutUser } from "../authentication/firebase-config";
 // import { UserContext } from "../authentication/user.context";
 
 const Navigation = () => {
   // const { currentUser } = useContext(UserContext);
+  // for user sign Limitation
+  const [authUser, setAuthUser] = useState(null);
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setAuthUser(user);
+      } else {
+        setAuthUser(null);
+      }
+    });
+  }, []);
+
+  const userSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        console.log("Sign Out successfully");
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <Fragment>
       <div className="navigation">
@@ -46,6 +68,27 @@ const Navigation = () => {
               SIGN IN
             </Link>
           )} */}
+
+          {/* <Link className="nav-link" to="/signin">
+            Sign In
+          </Link>
+          <Link className="nav-link" to="/signup">
+            Sign Up
+          </Link>
+          <Link className="nav-link" to="/detail">
+            Detail
+          </Link> */}
+          {authUser ? (
+            <>
+              <Link className="nav-link" to="/detail">
+                Profile
+              </Link>
+            </>
+          ) : (
+            <Link className="nav-link" to="/signup">
+              Sign Up
+            </Link>
+          )}
         </div>
       </div>
       <Outlet />

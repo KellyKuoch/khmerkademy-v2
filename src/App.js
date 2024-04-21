@@ -23,12 +23,17 @@ import FillTheBlank from "./content/FillTheBlank";
 import Flashcard from "./content/Flashcard";
 import ThreeGrammar from "./units/unit-3/ThreeGrammar";
 import ThreePhrases from "./units/unit-3/ThreePhrases.unit3";
+import SignIn from "./components/auth/SignIn";
+import SignUp from "./components/auth/SignUp";
+import AuthDetails from "./components/AuthDetails";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "./firebase";
 // import { auth } from "./authentication/firebase-config";
 // import SignIn from "./authentication/SignIn";
 
 const App = ({ initialScore = 0, onScoreChange }) => {
   const [score, setScore] = useState(initialScore);
-  const [user, setUser] = useState(null);
+  const [authUser, setAuthUser] = useState(null);
 
   //Firebase authentication
   // useEffect(() => {
@@ -116,6 +121,9 @@ const App = ({ initialScore = 0, onScoreChange }) => {
         <Route path="unit/conversation-3" element={<TwoConversation />} />
         <Route path="unit/grammar-1" element={<Grammar />} />
         <Route path="unit/grammar-3" element={<ThreeGrammar />} />
+        <Route path="signin" element={<SignIn />} />
+        <Route path="signup" element={<SignUp />} />
+        <Route path="detail" element={<AuthDetails />} />
         {/* <Route path="profile" element={<Profile />} /> */}
       </Route>
     </Routes>
