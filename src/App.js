@@ -5,7 +5,7 @@ import Homepage from "./components/Homepage.component";
 // import Exercise from "./components/Exercises.component";
 import DailyPhrase from "./components/DailyPhrase.component";
 import MatchingPair from "./content/MatchingPair.content";
-import Profile from "./authentication/Profile.authentication";
+// import Profile from "./authentication/Profile.authentication";
 import Unit from "./units/Unit.units";
 import Culture from "./culture-topic/Culture.culture-topic";
 import Consonants from "./units/unit-1/Consonants";
@@ -23,9 +23,18 @@ import FillTheBlank from "./content/FillTheBlank";
 import Flashcard from "./content/Flashcard";
 import ThreeGrammar from "./units/unit-3/ThreeGrammar";
 import ThreePhrases from "./units/unit-3/ThreePhrases.unit3";
+// import { auth } from "./authentication/firebase-config";
+// import SignIn from "./authentication/SignIn";
 
 const App = ({ initialScore = 0, onScoreChange }) => {
   const [score, setScore] = useState(initialScore);
+  const [user, setUser] = useState(null);
+
+  //Firebase authentication
+  // useEffect(() => {
+  //   const unsubscribe = auth().onAuthStateChanged(setUser);
+  //   return () => unsubscribe();
+  // }, []);
 
   //Score changes function
   useEffect(() => {
@@ -43,7 +52,9 @@ const App = ({ initialScore = 0, onScoreChange }) => {
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
+        {/* <Route index element={user ? <Homepage user={user} /> : <SignIn />} /> */}
         <Route index element={<Homepage />} />
+
         <Route path="home" element={<Homepage />} />
         <Route path="daily-phrase" element={<DailyPhrase />} />
         <Route path="fun-facts" element={<Culture />} />
@@ -105,7 +116,7 @@ const App = ({ initialScore = 0, onScoreChange }) => {
         <Route path="unit/conversation-3" element={<TwoConversation />} />
         <Route path="unit/grammar-1" element={<Grammar />} />
         <Route path="unit/grammar-3" element={<ThreeGrammar />} />
-        <Route path="profile" element={<Profile />} />
+        {/* <Route path="profile" element={<Profile />} /> */}
       </Route>
     </Routes>
   );
