@@ -110,6 +110,10 @@ Generic layout (demo looks)
   gap: 24px;
 }
 
+.article-photo-popup {
+  width: 500px;
+}
+
 @media screen and (max-width: 428px) {
   article {
     container: card/inline-size;

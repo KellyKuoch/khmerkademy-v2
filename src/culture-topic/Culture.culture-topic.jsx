@@ -96,7 +96,11 @@ const Culture = () => {
         <article key={item.id}>
           <div className="article-wrapper">
             <figure>
-              <img src={item.image} alt="culture-img" />
+              <img
+                src={item.image}
+                className="article-photo-popup"
+                alt="culture-img"
+              />
             </figure>
             <div className="article-body">
               <h2>{item.title}</h2>
