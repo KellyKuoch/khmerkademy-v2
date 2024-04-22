@@ -1,18 +1,35 @@
 import "./Homepage.css";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../firebase";
 export default function App() {
+  const [authUser, setAuthUser] = useState(null);
+
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setAuthUser(user);
+      } else {
+        setAuthUser(null);
+      }
+    });
+  }, []);
   return (
     <div className="main-homepage">
       <div className="top-container">
         <div className="left-top">
           <h2>Learn a language for free. Forever</h2>
           <div className="button-row">
-            <Link to="/learn/section-1" className="button-8">
-              Log In
-            </Link>
-            <Link to="/learn/section-1" className="button-8">
-              Sign Up
-            </Link>
+            {!authUser ? (
+              <Link className="button-8" to="/signup">
+                Sign In
+              </Link>
+            ) : (
+              <Link className="button-8" to="/lessons">
+                Start Learning
+              </Link>
+            )}
           </div>
         </div>
         <img

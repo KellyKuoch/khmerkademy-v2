@@ -5,7 +5,7 @@ import Homepage from "./components/Homepage.component";
 // import Exercise from "./components/Exercises.component";
 import DailyPhrase from "./components/DailyPhrase.component";
 import MatchingPair from "./content/MatchingPair.content";
-import Profile from "./authentication/Profile.authentication";
+// import Profile from "./authentication/Profile.authentication";
 import Unit from "./units/Unit.units";
 import Culture from "./culture-topic/Culture.culture-topic";
 import Consonants from "./units/unit-1/Consonants";
@@ -21,9 +21,26 @@ import Grammar from "./units/unit-2/Grammar";
 import { useEffect, useState } from "react";
 import FillTheBlank from "./content/FillTheBlank";
 import Flashcard from "./content/Flashcard";
+import ThreeGrammar from "./units/unit-3/ThreeGrammar";
+import ThreePhrases from "./units/unit-3/ThreePhrases.unit3";
+import SignIn from "./components/auth/SignIn";
+import SignUp from "./components/auth/SignUp";
+import AuthDetails from "./components/AuthDetails";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "./firebase";
+import Instructions from "./components/Instruction";
+// import { auth } from "./authentication/firebase-config";
+// import SignIn from "./authentication/SignIn";
 
 const App = ({ initialScore = 0, onScoreChange }) => {
   const [score, setScore] = useState(initialScore);
+  const [authUser, setAuthUser] = useState(null);
+
+  //Firebase authentication
+  // useEffect(() => {
+  //   const unsubscribe = auth().onAuthStateChanged(setUser);
+  //   return () => unsubscribe();
+  // }, []);
 
   //Score changes function
   useEffect(() => {
@@ -41,7 +58,9 @@ const App = ({ initialScore = 0, onScoreChange }) => {
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
+        {/* <Route index element={user ? <Homepage user={user} /> : <SignIn />} /> */}
         <Route index element={<Homepage />} />
+        <Route path="instruction" element={<Instructions />} />
         <Route path="home" element={<Homepage />} />
         <Route path="daily-phrase" element={<DailyPhrase />} />
         <Route path="fun-facts" element={<Culture />} />
@@ -84,13 +103,29 @@ const App = ({ initialScore = 0, onScoreChange }) => {
             />
           }
         />
+        <Route
+          path="unit/basic-phrase-3"
+          element={
+            <ThreePhrases
+              printTest={printTest}
+              incrementScore={incrementScore}
+              score={score}
+              setScore={setScore}
+            />
+          }
+        />
         <Route path="unit/vocabulary-1" element={<OneVocabulary />} />
         <Route path="unit/vocabulary-2" element={<TwoVocabulary />} />
         <Route path="unit/number" element={<Number />} />
         <Route path="unit/conversation-1" element={<OneConversation />} />
         <Route path="unit/conversation-2" element={<TwoConversation />} />
+        <Route path="unit/conversation-3" element={<TwoConversation />} />
         <Route path="unit/grammar-1" element={<Grammar />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="unit/grammar-3" element={<ThreeGrammar />} />
+        <Route path="signin" element={<SignIn />} />
+        <Route path="signup" element={<SignUp />} />
+        <Route path="detail" element={<AuthDetails />} />
+        {/* <Route path="profile" element={<Profile />} /> */}
       </Route>
     </Routes>
   );

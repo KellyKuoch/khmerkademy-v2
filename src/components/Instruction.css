@@ -1,0 +1,25 @@
+.outer-all-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 300px;
+}
+.main-instruction {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 700px;
+    height: auto;
+    padding: 50px;
+    /* border: solid black 1px; */
+    border-radius: 10px;
+    background-color: #B3C8CF;
+}
+
+.instruction-picture img {
+    width: 300px;
+}
