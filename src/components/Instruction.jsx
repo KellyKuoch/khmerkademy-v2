@@ -50,16 +50,20 @@ const Instructions = () => {
           <div className="instruction-content">
             <p>{instructionData[currentStep].content}</p>
           </div>
-
-          <button className="button-8" onClick={handleNextStep}>
-            {currentStep === instructionData.length - 1
-              ? "Go to lesson"
-              : "Next"}
-          </button>
-
-          <button className="button-8" onClick={handleSkip}>
-            Skip
-          </button>
+          <div className="instruction-button">
+            <button className="button-8" onClick={handleNextStep}>
+              {currentStep === instructionData.length - 1
+                ? "Start learning now"
+                : "Next"}
+            </button>
+            {currentStep !== instructionData.length - 1 ? (
+              <button className="button-8" onClick={handleSkip}>
+                Skip
+              </button>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       </div>
     </div>

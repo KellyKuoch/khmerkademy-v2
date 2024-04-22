@@ -1,7 +1,14 @@
 import "./Phrases.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-const Phrases = ({ data, printTest, incrementScore, score, setScore }) => {
+const Phrases = ({
+  data,
+  printTest,
+  incrementScore,
+  score,
+  setScore,
+  handleNext,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const showNext = () => {
@@ -45,9 +52,10 @@ const Phrases = ({ data, printTest, incrementScore, score, setScore }) => {
               >
                 Learn again
               </button>{" "}
-              <Link to="/lessons" className="each-unit">
+              {/* <Link to="/lessons" className="each-unit">
                 <button className="button-8">Back to Lessons</button>{" "}
-              </Link>
+              </Link> */}
+              <button onClick={handleNext}>Next lesson</button>
             </>
           ) : (
             <button

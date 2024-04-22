@@ -17,7 +17,6 @@ const SignUp = () => {
   const [signUpEmail, setSignUpEmail] = useState("");
   const [signUpPassword, setSignUpPassword] = useState("");
   const signUp = (e) => {
-    // todo: sign in
     e.preventDefault();
     createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
       .then((userCredential) => {
@@ -25,20 +24,9 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log(error);
+        alert("You already have an account. Please sign in instead ");
       });
   };
-
-  // const signIn = (e) => {
-  //   // todo: sign in
-  //   e.preventDefault();
-  //   signInWithEmailAndPassword(auth, signInEmail, signInPassword)
-  //     .then((userCredential) => {
-  //       console.log(userCredential);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
 
   const signIn = async (event) => {
     event.preventDefault();
@@ -54,8 +42,8 @@ const SignUp = () => {
         alert("Invalid credential");
       }
     } catch (error) {
-      console.error("Login failed", error);
-      alert("Login failed. Please try again. ");
+      console.error("Incorrect Email or Password", error);
+      alert("Incorrect Email or Password. Please try again. ");
     }
   };
 

@@ -23,3 +23,10 @@
 .instruction-picture img {
     width: 300px;
 }
+
+.instruction-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
