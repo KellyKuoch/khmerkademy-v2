@@ -1,7 +1,7 @@
 import "./Homepage.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
 export default function App() {
   const [authUser, setAuthUser] = useState(null);

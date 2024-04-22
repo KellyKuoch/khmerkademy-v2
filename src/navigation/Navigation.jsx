@@ -1,9 +1,9 @@
-import { Fragment, useContext } from "react";
+import { Fragment } from "react";
 import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./Navigation.css";
 import { auth } from "../firebase";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 
 const Navigation = () => {
   // for user sign Limitation
@@ -30,31 +30,9 @@ const Navigation = () => {
           <Link className="nav-link" to="/home">
             Home
           </Link>
-
-          {/* <div className="profile-container">
-            <Link className="nav-link" to="/profile">
-              <img src="/img/anya-profile.webp" alt="logo" />
-            </Link>
-          </div> */}
-          {/* {currentUser ? (
-            <span className="nav-link" onClick={signOutUser}>
-              SIGN OUT
-            </span>
-          ) : (
-            <Link className="nav-link" to="/auth">
-              SIGN IN
-            </Link>
-          )} */}
-
-          {/* <Link className="nav-link" to="/signin">
-            Sign In
+          <Link className="nav-link" to="/fun-facts">
+            Fun Facts
           </Link>
-          <Link className="nav-link" to="/signup">
-            Sign Up
-          </Link>
-          <Link className="nav-link" to="/detail">
-            Detail
-          </Link> */}
           {authUser ? (
             <>
               <Link className="nav-link" to="/daily-phrase">
@@ -64,9 +42,7 @@ const Navigation = () => {
               <Link className="nav-link" to="/lessons">
                 Lessons
               </Link>
-              <Link className="nav-link" to="/fun-facts">
-                Fun Facts
-              </Link>
+
               <div className="profile-container">
                 <Link className="nav-link" to="/detail">
                   <img src="/img/github-pf.png" alt="logo" />
