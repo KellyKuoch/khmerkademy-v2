@@ -4,11 +4,8 @@ import { Link, Outlet } from "react-router-dom";
 import "./Navigation.css";
 import { auth } from "../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-// import { signOutUser } from "../authentication/firebase-config";
-// import { UserContext } from "../authentication/user.context";
 
 const Navigation = () => {
-  // const { currentUser } = useContext(UserContext);
   // for user sign Limitation
   const [authUser, setAuthUser] = useState(null);
   useEffect(() => {
@@ -21,13 +18,6 @@ const Navigation = () => {
     });
   }, []);
 
-  const userSignOut = () => {
-    signOut(auth)
-      .then(() => {
-        console.log("Sign Out successfully");
-      })
-      .catch((error) => console.log(error));
-  };
   return (
     <Fragment>
       <div className="navigation">
@@ -40,20 +30,7 @@ const Navigation = () => {
           <Link className="nav-link" to="/home">
             Home
           </Link>
-          <Link className="nav-link" to="/daily-phrase">
-            Daily Khmer
-          </Link>
 
-          <Link className="nav-link" to="/lessons">
-            Lessons
-          </Link>
-
-          {/* <Link className="nav-link" to="/exercise">
-            Exercises
-          </Link> */}
-          <Link className="nav-link" to="/fun-facts">
-            Fun Facts
-          </Link>
           {/* <div className="profile-container">
             <Link className="nav-link" to="/profile">
               <img src="/img/anya-profile.webp" alt="logo" />
@@ -80,13 +57,25 @@ const Navigation = () => {
           </Link> */}
           {authUser ? (
             <>
-              <Link className="nav-link" to="/detail">
-                Profile
+              <Link className="nav-link" to="/daily-phrase">
+                Daily Khmer
               </Link>
+
+              <Link className="nav-link" to="/lessons">
+                Lessons
+              </Link>
+              <Link className="nav-link" to="/fun-facts">
+                Fun Facts
+              </Link>
+              <div className="profile-container">
+                <Link className="nav-link" to="/detail">
+                  <img src="/img/github-pf.png" alt="logo" />
+                </Link>
+              </div>
             </>
           ) : (
             <Link className="nav-link" to="/signup">
-              Sign Up
+              Sign In
             </Link>
           )}
         </div>

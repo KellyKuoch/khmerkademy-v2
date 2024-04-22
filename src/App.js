@@ -28,6 +28,7 @@ import SignUp from "./components/auth/SignUp";
 import AuthDetails from "./components/AuthDetails";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "./firebase";
+import Instructions from "./components/Instruction";
 // import { auth } from "./authentication/firebase-config";
 // import SignIn from "./authentication/SignIn";
 
@@ -59,7 +60,7 @@ const App = ({ initialScore = 0, onScoreChange }) => {
       <Route path="/" element={<Navigation />}>
         {/* <Route index element={user ? <Homepage user={user} /> : <SignIn />} /> */}
         <Route index element={<Homepage />} />
-
+        <Route path="instruction" element={<Instructions />} />
         <Route path="home" element={<Homepage />} />
         <Route path="daily-phrase" element={<DailyPhrase />} />
         <Route path="fun-facts" element={<Culture />} />

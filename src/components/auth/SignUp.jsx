@@ -1,5 +1,6 @@
 import "./SignUp.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
 import {
   createUserWithEmailAndPassword,
@@ -10,6 +11,7 @@ const SignUp = () => {
   //sign in
   const [signInEmail, setSignInEmail] = useState("");
   const [signInPassword, setSignInPassword] = useState("");
+  const navigate = useNavigate();
 
   //sing up
   const [signUpEmail, setSignUpEmail] = useState("");
@@ -26,16 +28,35 @@ const SignUp = () => {
       });
   };
 
-  const signIn = (e) => {
-    // todo: sign in
-    e.preventDefault();
-    signInWithEmailAndPassword(auth, signInEmail, signInPassword)
-      .then((userCredential) => {
-        console.log(userCredential);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  // const signIn = (e) => {
+  //   // todo: sign in
+  //   e.preventDefault();
+  //   signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+  //     .then((userCredential) => {
+  //       console.log(userCredential);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
+
+  const signIn = async (event) => {
+    event.preventDefault();
+    try {
+      const user = await signInWithEmailAndPassword(
+        auth,
+        signInEmail,
+        signInPassword
+      );
+      if (user) {
+        navigate("/instruction");
+      } else {
+        alert("Invalid credential");
+      }
+    } catch (error) {
+      console.error("Login failed", error);
+      alert("Login failed. Please try again. ");
+    }
   };
 
   return (
