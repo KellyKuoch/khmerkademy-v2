@@ -62,7 +62,9 @@ const Conversation = ({ data, handleNext }) => {
             <button className="button-8" onClick={() => setCurrentIndex(0)}>
               Learn again
             </button>{" "}
-            <button onClick={handleNext}>Next lesson</button>
+            <button className="button-8" onClick={handleNext}>
+              Next lesson
+            </button>
           </>
         ) : (
           <button className="button-8" onClick={handleContinue}>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./FillTheBlank.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const blankWords = [
   {
     id: 1,
@@ -87,6 +87,7 @@ const FillTheBlank = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [feedback, setFeedback] = useState("");
   const [showContinue, setShowContinue] = useState(false);
+  const navigate = useNavigate();
 
   const currentQuestion = blankWords[currentQuestionIndex];
 
@@ -119,6 +120,12 @@ const FillTheBlank = () => {
         <Link to="/lessons" className="each-unit">
           <button className="button-8">Back to Lessons</button>
         </Link>
+        <button
+          className="button-8"
+          onClick={() => navigate("/unit/basic-phrase-2")}
+        >
+          Next Lesson
+        </button>
       </div>
     );
   }

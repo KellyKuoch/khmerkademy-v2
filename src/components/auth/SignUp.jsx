@@ -6,21 +6,26 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+// import useFetchUserProgress from "../../hooks/useFetchUserProgress";
 
 const SignUp = () => {
   //sign in
+  // const { currentUser } = auth();
   const [signInEmail, setSignInEmail] = useState("");
   const [signInPassword, setSignInPassword] = useState("");
   const navigate = useNavigate();
+  // const progress = useFetchUserProgress(currentUser?.uid);
 
   //sing up
   const [signUpEmail, setSignUpEmail] = useState("");
   const [signUpPassword, setSignUpPassword] = useState("");
+
   const signUp = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
       .then((userCredential) => {
         console.log(userCredential);
+        navigate("/instruction");
       })
       .catch((error) => {
         console.log(error);
@@ -37,7 +42,17 @@ const SignUp = () => {
         signInPassword
       );
       if (user) {
-        navigate("/instruction");
+        navigate("/unit/basic-phrase-1");
+        // const lastProgress = progress.sort(
+        //   (a, b) => b.lessonId - a.lessonId
+        // )[0];
+        // if (lastProgress && lastProgress.completed) {
+        //   navigate(`/unit/${lastProgress.lessonId + 1}`);
+        // } else if (lastProgress) {
+        //   navigate(`/unit/${lastProgress.lessonId}`);
+        // } else {
+        //   navigate("instruction");
+        // }
       } else {
         alert("Invalid credential");
       }

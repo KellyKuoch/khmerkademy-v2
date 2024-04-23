@@ -1,11 +1,14 @@
 import Phrases from "../Phrases.unit";
 import data from "./onePhrases.json";
+
 import { useNavigate } from "react-router-dom";
+
 const OnePhrases = ({ printTest, incrementScore, score, setScore }) => {
   const navigate = useNavigate();
   const handleNext = () => {
     navigate("/unit/conversation-1");
   };
+
   return (
     <div className="">
       <Phrases

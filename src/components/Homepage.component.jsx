@@ -26,8 +26,8 @@ export default function App() {
                 Sign In
               </Link>
             ) : (
-              <Link className="button-8" to="/lessons">
-                Start Learning
+              <Link className="button-8" to="/unit/basic-phrase-1">
+                Continue your journey
               </Link>
             )}
           </div>
