@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./MatchingPair.css";
+import "./Quiz.css";
 const questions = [
   {
     prompt: "A Boy",
@@ -43,7 +43,7 @@ const questions = [
   },
 ];
 
-const MatchingPair = ({ incrementScore, setScore, score }) => {
+const Quiz = ({ incrementScore, setScore, score }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -85,9 +85,9 @@ const MatchingPair = ({ incrementScore, setScore, score }) => {
           </button>
         ))}
       </div>
-      <progress value={score} max={questions.length} />
+      {/* <progress value={score} max={questions.length} /> */}
     </div>
   );
 };
 
-export default MatchingPair;
+export default Quiz;

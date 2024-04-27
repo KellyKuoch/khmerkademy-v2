@@ -22,6 +22,19 @@ const Vocabulary = ({ data }) => {
             </div>
           </div>
         ))}
+        {data.family.map((word) => (
+          <div key={word.id} className="each-english">
+            <div className="vocab-item">
+              <p>{word.english}</p>
+            </div>
+            <div className="vocab-item">
+              <p>{word.word}</p>
+            </div>
+            <div className="vocab-item">
+              <p>{word.phonetic}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

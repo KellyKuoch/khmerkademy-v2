@@ -95,7 +95,7 @@ const Unit = () => {
               <Link to="/exercise/fill-the-blank">
                 {" "}
                 <img
-                  src="https://placehold.co/600x400?text=Exercise 2"
+                  src="https://placehold.co/600x400?text=Fill in the blank"
                   alt="logo"
                   className="fish"
                 />
@@ -135,10 +135,10 @@ const Unit = () => {
                   className="fish"
                 />
               </Link>
-              <Link>
+              <Link to="/exercise/quiz">
                 {" "}
                 <img
-                  src="https://placehold.co/600x400?text=Exercise 3"
+                  src="https://placehold.co/600x400?text=Quiz 1"
                   alt="logo"
                   className="fish"
                 />
@@ -178,10 +178,10 @@ const Unit = () => {
                   className="fish"
                 />
               </Link>
-              <Link to="/unit/conversation-1">
+              <Link to="/exercise/matching-pair">
                 {" "}
                 <img
-                  src="https://placehold.co/600x400?text=Exercise 4"
+                  src="https://placehold.co/600x400?text=Matching Pair"
                   alt="logo"
                   className="fish"
                 />

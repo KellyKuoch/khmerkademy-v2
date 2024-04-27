@@ -1,166 +1,49 @@
-/* App.css */
-@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
-.top {
-  padding-top: 90px;
-  text-align: center;
-}
-.prompt {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.box {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.button-99 {
-  background-color: #f0f0f0; /* Light grey background */
-  border: 2px solid #ddd; /* Grey border */
-  color: #333; /* Dark grey text */
-  padding: 10px 20px; /* Top/bottom and left/right padding */
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 2px; /* Margin around buttons */
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
-}
-
-button:hover {
-  background-color: #ddd; /* Slightly darker background on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
-}
-
-.congratulations {
-  font-size: 24px;
-  color: #4caf50; /* Green text */
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-}
-
-/* CSS */
-.button-83 {
-  appearance: button;
-  background-color: transparent;
-  background-image: linear-gradient(to bottom, #fff, #f8eedb);
-  border: 0 solid #e5e7eb;
-  border-radius: 0.5rem;
-  box-sizing: border-box;
-  color: #482307;
-  column-gap: 1rem;
-  cursor: pointer;
-  display: flex;
-  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 100%;
-  font-weight: 700;
-  line-height: 24px;
-  margin: 10px;
-  outline: 2px solid transparent;
-  padding: 50px;
-  text-align: center;
-  text-transform: none;
-  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1),
-    0px 2px 2px rgba(81, 41, 10, 0.2);
-}
-
-.button-83:active {
-  background-color: #f3f4f6;
-  box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15),
-    0px 1px 1px rgba(81, 41, 10, 0.15);
-  transform: translateY(0.125rem);
-}
-
-.button-83:focus {
-  box-shadow: rgba(72, 35, 7, 0.46) 0 0 0 4px,
-    -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
-}
-
-.button-93 {
-  margin: 20px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 16px; /* Adjust font size for smaller screens if needed */
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 25px; /* Smaller padding for mobile */
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap;
-  max-width: 100%; /* Ensure button does not overflow screen width */
-}
-
-@media screen and (max-width: 768px) {
-  .box {
+.main-matching-pair {
+    display: flex;
     flex-direction: column;
-  }
-  .button-93 {
-    font-size: 14px; /* Smaller font size for mobile devices */
-    padding: 8px 12px; /* Further reduce padding for smaller screens */
-  }
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.matching-pair-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* padding: 40px; */
+    padding-top: 40px;
+    gap: 200px;
+    padding-bottom: 40px;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pair-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    padding: 20px;
+    background-color: #4CCD99;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
 }
 
 
-.button-93:hover {
-    box-shadow: 4px 4px 0 #000;
-    transform: translate(-4px,-4px);
-}
-.button-93:focus-visible{
-    outline-offset: 1px;
-}
 
-.congratulations {
-  font-size: 50px;
-  font-family: 'Sigmar One', cursive;
-  cursor: pointer;
-  z-index: 2;
-  position: absolute;
-  top: 140px;
-  left: 0;
-  right: 0;
-  width: 550px;
-  height: 100px;
-  padding: 20px 10px;
-  text-align: center;
-  margin: 0 auto;
-  opacity: 0;
-  transform: scale(0.5);
-  transform-origin: 50% 50%;
-  animation: fadeInScaleUp 1s ease-in-out forwards;
-}
-
-@keyframes fadeInScaleUp {
-  0% {
-      opacity: 0;
-      transform: scale(0.5);
-  }
-  50% {
-      opacity: 0.5;
-      transform: scale(1.1);
-  }
-  100% {
-      opacity: 1;
-      transform: scale(1);
-  }
-}

@@ -34,7 +34,7 @@ export default function App() {
         </div>
         <img
           className="image-class"
-          src="./img/angkor-homepage.jpg"
+          src="./img/angkor-homepage-small.jpg"
           alt="top-pic"
         />
       </div>
@@ -44,7 +44,7 @@ export default function App() {
           <div className="lesson-container">
             <img
               className="image-small"
-              src="./img/cambodia-convo.jpg"
+              src="./img/cambodia-convo-small.jpg"
               alt="small-pic"
             />
             <h3>Personalized Learning</h3>
