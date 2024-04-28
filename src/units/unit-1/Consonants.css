@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 35px;
     padding-bottom: 30px;
 }
 
@@ -16,6 +16,7 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    padding-top: 25px;
 }
 .consonant {
     background-color: #E5DDC5;
@@ -86,8 +87,8 @@
   
   .button-1 {
     
-    background-color: #E5DDC5;
-    border: solid black 1px;
+    background-color: #93BFCF;
+    /* border: solid black 1px; */
     border-radius: 5px;
     width: 100px;
     display: flex;
@@ -107,11 +108,12 @@
     touch-action: manipulation;
     vertical-align: baseline;
     white-space: nowrap;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
   
   .button-1:hover,
   .button-1:focus {
-    background-color: #F0EBE3;
+    background-color: #6096B4;
     cursor: pointer;
   }
   

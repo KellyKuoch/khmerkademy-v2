@@ -24,7 +24,7 @@ const Phrases = ({
       <div className="phrases-title">
         <h2>Basic Phrases</h2>
         {/* <h2>{score}</h2> */}
-        <progress value={score} max={data.greeting.length - 1} />
+        {/* <progress value={score} max={data.greeting.length - 1} /> */}
         <div key={currentPhrase.id} className="each-phrase">
           <div className="main-item">
             <span>{currentPhrase.word}</span>

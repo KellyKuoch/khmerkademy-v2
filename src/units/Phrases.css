@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 90px;
+  padding-top: 35px;
+  
   
 }
 
@@ -12,6 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* padding-bottom: 20px; */
 }
 
 .main-item {
@@ -37,6 +39,7 @@
   background-color: #DDDDDD;
   padding: 20px;
   /* margin: 20px; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .phrase-item {

@@ -146,7 +146,7 @@ const FillTheBlank = () => {
             <div className="correct-answer-choice">
               {currentQuestion.options.map((option) => (
                 <button
-                  className=""
+                  className="button-1"
                   key={option.text}
                   onClick={() => {
                     handleOptionClick(option.text);
