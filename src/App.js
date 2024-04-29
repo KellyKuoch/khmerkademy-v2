@@ -31,6 +31,8 @@ import { auth } from "./firebase";
 import Instructions from "./components/Instruction";
 import Instructions2 from "./components/Instruction-2";
 import MatchingPair from "./content/MatchingPair";
+import Lesson from "./components/Lesson";
+import EachUnit from "./components/EachUnit";
 // import { auth } from "./authentication/firebase-config";
 // import SignIn from "./authentication/SignIn";
 
@@ -65,6 +67,8 @@ const App = ({ initialScore = 0, onScoreChange }) => {
         <Route path="instruction" element={<Instructions />} />
         <Route path="home" element={<Homepage />} />
         <Route path="daily-phrase" element={<DailyPhrase />} />
+        <Route path="lesson" element={<Lesson />} />
+        <Route path="unit-1" element={<EachUnit />} />
         <Route path="fun-facts" element={<Culture />} />
         {/* <Route path="exercise" element={<Exercise />} /> */}
         <Route path="exercise/fill-the-blank" element={<FillTheBlank />} />
@@ -81,7 +85,7 @@ const App = ({ initialScore = 0, onScoreChange }) => {
         />
         <Route path="exercise/matching-pair" element={<MatchingPair />} />
         {/* <Route path="lessons" element={<Learn />} /> */}
-        <Route path="lessons" element={<Unit />} />
+        {/* <Route path="lessons" element={<Unit />} /> */}
         <Route path="unit/consonants" element={<Consonants />} />
         <Route path="unit/vowels" element={<Vowels />} />
         <Route
