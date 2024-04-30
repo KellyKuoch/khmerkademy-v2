@@ -1,11 +1,16 @@
 import "./MatchingPair.css";
 const MatchingPair = () => {
-  const firstWord = [
+  const matchingWord = [
     {
       id: 1,
-      english: "Hello",
-      khmer: "",
-      phonetic: "",
+      firstEnglish: "Hello",
+      firstKhmer: "សួស្តី / Sous Sdei",
+      secondEnglish: "",
+      secondKhmer: "",
+      thirdEnglish: "",
+      thirdKhmer: "",
+      fourthEnglish: "",
+      fourthKhmer: "",
     },
     {
       id: 2,
@@ -80,22 +85,12 @@ const MatchingPair = () => {
       <h2>Match the correct words</h2>
       <div className="matching-pair-container">
         <div className="left-container">
-          <div className="pair-boxes">
-            <span>Hello</span>
-            <span>Sour Sdey</span>
-          </div>
-          <div className="pair-boxes" tabindex="0">
-            <span>Hello</span>
-            <span>Sour Sdey</span>
-          </div>
-          <div className="pair-boxes">
-            <span>Hello</span>
-            <span>Sour Sdey</span>
-          </div>
-          <div className="pair-boxes">
-            <span>Hello</span>
-            <span>Sour Sdey</span>
-          </div>
+          {matchingWord.map((item) => (
+            <div className="pair-boxes">
+              <span>{item.firstEnglish}</span>
+              <span>{item.firstKhmer}</span>
+            </div>
+          ))}
         </div>
         <div className="right-container">
           <div className="pair-boxes">

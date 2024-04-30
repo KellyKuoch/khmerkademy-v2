@@ -37,7 +37,7 @@ const Instructions2 = () => {
   };
 
   const handleSkip = () => {
-    navigate("/lessons");
+    navigate("/lesson");
   };
   return (
     <div className="outer-all-component">

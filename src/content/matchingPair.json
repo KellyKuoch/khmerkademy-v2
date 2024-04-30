@@ -1,0 +1,41 @@
+{
+  "exercise": "Mix and Match",
+  "sets": [
+    {
+      "set": 1,
+      "pairs": [
+        { "left": "Hello", "right": "សួស្តី" },
+        { "left": "Good bye!", "right": "លាសិនហើយ" },
+        { "left": "Good evening", "right": "សាយន្ត័សួស្តី" },
+        { "left": "Tomato", "right": "ផ្លែប៉េងប៉ោះ" }
+      ]
+    },
+    {
+      "set": 2,
+      "pairs": [
+        { "left": "Orange", "right": "Orange" },
+        { "left": "Tomato", "right": "Red" },
+        { "left": "Lemon", "right": "Yellow" },
+        { "left": "Frog", "right": "Green" }
+      ]
+    },
+    {
+      "set": 3,
+      "pairs": [
+        { "left": "Ocean", "right": "Blue" },
+        { "left": "Eggplant", "right": "Purple" },
+        { "left": "Carrot", "right": "Orange" },
+        { "left": "Coal", "right": "Black" }
+      ]
+    },
+    {
+      "set": 5,
+      "pairs": [
+        { "left": "Peacock", "right": "Blue" },
+        { "left": "Lavender", "right": "Purple" },
+        { "left": "Pumpkin", "right": "Orange" },
+        { "left": "Snow", "right": "White" }
+      ]
+    }
+  ]
+}
