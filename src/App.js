@@ -30,7 +30,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "./firebase";
 import Instructions from "./components/Instruction";
 import Instructions2 from "./components/Instruction-2";
-import MatchingPair from "./content/MatchingPair";
+import MatchingPair from "./content/MatchingPair.content";
 import Lesson from "./components/Lesson";
 import EachUnit from "./components/EachUnit";
 // import { auth } from "./authentication/firebase-config";

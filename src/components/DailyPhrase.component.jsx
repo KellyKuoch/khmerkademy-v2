@@ -83,11 +83,11 @@ const DailyPhrase = () => {
       <main className="main">
         <section className="categorySection">
           <article className="category">
-            <img
+            {/* <img
               src={currentCategory.imgaeUrl} // Note: Check the spelling of "imgaeUrl"
               alt={currentCategory.title}
               className="categoryImage"
-            />
+            /> */}
             <h2 className="title">{currentCategory.title}</h2>
             <p className="translation">{currentCategory.translation}</p>
             <p className="pronunciation">{currentCategory.pronunciation}</p>

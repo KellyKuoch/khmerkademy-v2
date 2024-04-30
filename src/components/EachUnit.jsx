@@ -1,17 +1,131 @@
 import "./EachUnit.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const EachUnit = () => {
+  const navigate = useNavigate();
   return (
-    <div className="main-unit">
-      <h3>Unit 1</h3>
-      <Link to="/unit/consonants">Consonants</Link>
-      <Link to="/unit/vowels">Vowels</Link>
-      <Link to="/unit/conversation-1">Conversation-1</Link>
-      <Link to="/unit/basic-phrase-1">Basic Phrase-1</Link>
-      <Link to="/unit/conversation-2">Conversation-2</Link>
-      <Link to="/unit/basic-phrase-2">Basic Phrase-2</Link>
-      <Link to="/exercise/quiz">Quiz</Link>
-    </div>
+    <>
+      {/* <h3>Unit 1</h3> */}
+      <div className="main-unit">
+        {/* <Link to="/unit/consonants">Consonants</Link> */}
+
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/unit/consonants")}
+            >
+              Consonants
+            </div>
+          </div>
+        </div>
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/unit/vowels")}
+            >
+              Vowels
+            </div>
+          </div>
+        </div>
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/unit/conversation-1")}
+            >
+              Conversation 1
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/unit/basic-phrase-1")}
+            >
+              Basic Phrase 1
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/unit/conversation-2")}
+            >
+              Conversation 2
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/unit/basic-phrase-2")}
+            >
+              Basic Phrase 2
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/exercise/quiz")}
+            >
+              Quiz
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

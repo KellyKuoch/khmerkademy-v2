@@ -1,49 +1,46 @@
 .main-matching-pair {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 35px;
 }
 
 .matching-pair-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* padding: 40px; */
-    padding-top: 40px;
-    gap: 200px;
-    padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* padding: 40px; */
+  padding-top: 40px;
+  gap: 200px;
+  padding-bottom: 40px;
 }
 
 .left-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
 .right-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
 .pair-boxes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    /* border: 1px solid black; */
-    padding: 20px;
-    background-color: #4CCD99;
-    color: white;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  /* border: 1px solid black; */
+  padding: 20px;
+  background-color: #4ccd99;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
 }
-
-
-
