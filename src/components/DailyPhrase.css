@@ -2,7 +2,7 @@
 
 .header {
   text-align: center;
-  padding-top: 80px;
+  padding-top: 35px;
   /* Add more styles for header */
 }
 
@@ -15,14 +15,16 @@
 
 .categorySection {
   margin: 1rem 0;
+  width: 500px;
   /* Additional styling for the category section */
 }
 
 .category {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
   padding: 1rem;
   text-align: center;
+  cursor: pointer;
   /* Add more styles for each category */
 }
 
@@ -34,7 +36,7 @@
 }
 
 .title {
-  font-size: 1.2rem;
+  font-size: 40px;
   font-weight: bold;
   margin-top: 0.5rem;
   /* Additional styling for the title */
@@ -42,7 +44,7 @@
 
 .translation,
 .pronunciation {
-  font-size: 1rem;
+  font-size: 30px;
   margin-top: 0.25rem;
   /* Additional styling for translation and pronunciation */
 }

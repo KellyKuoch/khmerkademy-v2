@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 35px;
 }
 .card {
   width: 600px;
@@ -24,7 +24,7 @@
   justify-content: center;
   /* border: 1px solid #ccc; */
   border-radius: 20px;
-  background-color: #4793af;
+  background-color: #BFD8AF;
   transition: transform 0.6s;
 }
 
@@ -44,4 +44,11 @@
 
 .card.flipped .card-back {
   transform: rotateY(0deg);
+}
+
+@media only screen and (max-width: 430px) {
+  .card {
+    max-width: 90%;
+    height: 300px;
+  }
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Conversation.unit.css";
 import { Link } from "react-router-dom";
-const Conversation = ({ data }) => {
+const Conversation = ({ data, handleNext }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleContinue = () => {
@@ -62,9 +62,9 @@ const Conversation = ({ data }) => {
             <button className="button-8" onClick={() => setCurrentIndex(0)}>
               Learn again
             </button>{" "}
-            <Link to="/lessons" className="each-unit">
-              <button className="button-8">Back to Lessons</button>{" "}
-            </Link>
+            <button className="button-8" onClick={handleNext}>
+              Next lesson
+            </button>
           </>
         ) : (
           <button className="button-8" onClick={handleContinue}>

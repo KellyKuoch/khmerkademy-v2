@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Flashcard.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Flashcard = () => {
   const cards = [
@@ -50,6 +50,7 @@ const Flashcard = () => {
 
   const [isFlipped, setIsFlipped] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   const showNext = () => {
     if (currentIndex < Math.min(cards.length) - 1) {
@@ -91,9 +92,12 @@ const Flashcard = () => {
             >
               Learn again
             </button>
-            <Link to="/lessons" className="each-unit">
-              <button className="button-8">Back to Lessons</button>{" "}
-            </Link>
+            <button
+              className="button-8"
+              onClick={() => navigate("/instruction-2")}
+            >
+              Continue
+            </button>{" "}
           </>
         ) : (
           <button

@@ -1,91 +1,114 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./MatchingPair.css";
-const questions = [
-  {
-    prompt: "A Boy",
-    options: [
-      { text: "ក្មេងស្រី", phonetic: "kmeng srey" },
-      { text: "ក្មេងប្រុស", phonetic: "kmeng bros" },
-      { text: "មនុស្សប្រុស", phonetic: "monus bros" },
-      { text: "មនុស្សស្រី", phonetic: "monus srey" },
-    ],
-    answer: "ក្មេងប្រុស",
-  },
-  {
-    prompt: "A Girl",
-    options: [
-      { text: "ក្មេងស្រី", phonetic: "kmeng srey" },
-      { text: "ក្មេងប្រុស", phonetic: "kmeng bros" },
-      { text: "មនុស្សប្រុស", phonetic: "monus bros" },
-      { text: "មនុស្សស្រី", phonetic: "monus srey" },
-    ],
-    answer: "ក្មេងស្រី",
-  },
-  {
-    prompt: "A Man",
-    options: [
-      { text: "ក្មេងស្រី", phonetic: "kmeng srey" },
-      { text: "ក្មេងប្រុស", phonetic: "kmeng bros" },
-      { text: "មនុស្សប្រុស", phonetic: "monus bros" },
-      { text: "មនុស្សស្រី", phonetic: "monus srey" },
-    ],
-    answer: "មនុស្សប្រុស",
-  },
-  {
-    prompt: "A Woman",
-    options: [
-      { text: "ក្មេងស្រី", phonetic: "kmeng srey" },
-      { text: "ក្មេងប្រុស", phonetic: "kmeng bros" },
-      { text: "មនុស្សប្រុស", phonetic: "monus bros" },
-      { text: "មនុស្សស្រី", phonetic: "monus srey" },
-    ],
-    answer: "មនុស្សស្រី",
-  },
-];
+const MatchingPair = () => {
+  const matchingWord = [
+    {
+      set: 1,
+      pairs: [
+        { left: "Hello", right: "សួស្តី" },
+        { left: "Good bye!", right: "លាសិនហើយ" },
+        { left: "Good evening", right: "សាយន្ត័សួស្តី" },
+        { left: "Tomato", right: "ផ្លែប៉េងប៉ោះ" },
+      ],
+    },
+    {
+      set: 1,
+      pairs: [
+        { left: "Orange", right: "Orange" },
+        { left: "Tomato", right: "Red" },
+        { left: "Lemon", right: "Yellow" },
+        { left: "Frog", right: "Green" },
+      ],
+    },
+  ];
 
-const MatchingPair = ({ incrementScore, setScore, score }) => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedOption, setSelectedOption] = useState("");
+  const initialPairs = [
+    { left: "Apple", right: "Red" },
+    { left: "Banana", right: "Yellow" },
+    { left: "Grass", right: "Green" },
+    { left: "Sky", right: "Blue" },
+  ];
 
-  const currentQuestion = questions[currentQuestionIndex];
+  const [pairs, setPairs] = useState([]);
+  const [choices, setChoices] = useState({});
+  const [correctPairs, setCorrectPairs] = useState(initialPairs);
 
-  const handleOptionClick = (option) => {
-    setSelectedOption(option);
-    if (option === currentQuestion.answer) {
-      const nextIndex = currentQuestionIndex + 1;
-      if (nextIndex < questions.length) {
-        setCurrentQuestionIndex(nextIndex);
-      } else {
-        setCurrentQuestionIndex(-1);
-      }
-    }
+  // Shuffle
+  const shuffleRights = () => {
+    const rights = correctPairs.map((pair) => pair.right);
+    const shuffleRights = shuffleArray([...rights]);
+    const shuffledPairs = correctPairs.map((pair, index) => ({
+      ...pair,
+      right: shuffleRights[index],
+    }));
+    setPairs(shuffledPairs);
   };
 
-  if (currentQuestionIndex === -1) {
-    setScore = 0;
-    return <div className="congratulations"> Congratulations!</div>;
-  }
+  const shuffleArray = (array) => {
+    let currentIndex = array.length,
+      randomIndex;
 
+    while (currentIndex != 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+    return array;
+  };
+
+  // shuffle on mount
+  useEffect(() => {
+    shuffleRights();
+  }, []);
+
+  // Handle selection changes
+  const handleSelection = (left, selectedRight) => {
+    const newChoices = { ...choices, [left]: selectedRight };
+    setChoices(newChoices);
+  };
+
+  // Check Pair
+  const checkPair = (left) => {
+    return (
+      correctPairs.find((pair) => pair.left === left)?.right === choices[left]
+    );
+  };
   return (
-    <div className="top">
-      <h1>Choose the correct answer</h1>
-      <h2 className="prompt">{currentQuestion.prompt}</h2>
-      <div className="box">
-        {currentQuestion.options.map((option) => (
-          <button
-            className="button-93"
-            key={option.text}
-            onClick={() => {
-              handleOptionClick(option.text);
-              incrementScore(1);
-            }}
-          >
-            {option.text}
-            {"\n"} {option.phonetic}
-          </button>
-        ))}
-      </div>
-      <progress value={score} max={questions.length} />
+    <div className="main-matching-pair">
+      <h2>Match the correct words</h2>
+      {pairs.map((pair, index) => (
+        <div className="matching-pair-container">
+          <div className="left-container">
+            <div className="pair-boxes-left">
+              <span>{pair.left}</span>
+            </div>
+          </div>
+
+          <div className="right-container">
+            <div className="pair-boxes-right">
+              <select
+                value={choices[pair.left] || ""}
+                onChange={(e) => handleSelection(pair.left, e.target.value)}
+              >
+                <option value="">Select Color</option>
+                {pairs.map((p, i) => (
+                  <option key={i} value={p.right}>
+                    {p.right}
+                  </option>
+                ))}
+              </select>
+              {choices[pair.left] && (
+                <span>{checkPair(pair.left) ? " Correct!" : " Incorrect"}</span>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+      <button className="button-8">Check the answer</button>
     </div>
   );
 };

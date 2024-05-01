@@ -20,41 +20,59 @@ const Navigation = () => {
 
   return (
     <Fragment>
-      <div className="navigation">
-        <div className="logo-container">
-          <Link to="/home">
-            <img src="./img/angkor-wat.png" alt="logo" />
-          </Link>
+      <div className="navbar">
+        <div className="logo">
+          <Link to="/home">KhmerKademy</Link>{" "}
+          {/* Assuming you want a text logo since the image is commented out */}
         </div>
-        <div className="nav-links-container">
-          <Link className="nav-link" to="/home">
-            Home
-          </Link>
-          <Link className="nav-link" to="/fun-facts">
-            Fun Facts
-          </Link>
+        <ul>
+          {/* <li>
+            <Link className="nav-link" to="/home">
+              Home
+            </Link>
+          </li> */}
+          {/* <li>
+            <Link className="nav-link" to="/fun-facts">
+              Fun Facts
+            </Link>
+          </li> */}
           {authUser ? (
             <>
-              <Link className="nav-link" to="/daily-phrase">
-                Daily Khmer
-              </Link>
-
-              <Link className="nav-link" to="/lessons">
-                Lessons
-              </Link>
-
-              <div className="profile-container">
-                <Link className="nav-link" to="/detail">
-                  <img src="/img/github-pf.png" alt="logo" />
+              {/* <li>
+                <Link className="nav-link" to="/daily-phrase">
+                  Daily Khmer
                 </Link>
-              </div>
+              </li> */}
+              <li>
+                <Link className="nav-link" to="/lesson">
+                  Lessons
+                </Link>
+              </li>
+              {/* <li>
+                <Link className="nav-link" to="/dictionary">
+                  Dictionary
+                </Link>
+              </li> */}
+              <li>
+                <div className="profile-container">
+                  <Link className="nav-link" to="/detail">
+                    <img
+                      src="/img/github-pf.png"
+                      alt="Profile"
+                      className="pf-pic"
+                    />
+                  </Link>
+                </div>
+              </li>
             </>
           ) : (
-            <Link className="nav-link" to="/signup">
-              Sign In
-            </Link>
+            <li>
+              <Link className="nav-link" to="/signup">
+                Sign In
+              </Link>
+            </li>
           )}
-        </div>
+        </ul>
       </div>
       <Outlet />
     </Fragment>

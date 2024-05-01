@@ -4,25 +4,27 @@ import "./Instruction.css";
 
 const instructionData = [
   {
-    title: "Welcome to KhmerKademy!",
-    content: "I will show you how to get started...",
-  },
-  {
-    title: "Step 1: Start learning by clicking on 'Lesson'",
-    content: "There are several lessons that you can learn from this app",
-  },
-  {
-    title: "Step 2: You can choose to read about 'Cambodian Culture'",
-    content: "There are several topics about foods, tranditions, and culture.",
-  },
-  {
-    title: "Step 3: Daily phrases that would refresh everyday",
+    title: "Congratulation!",
     content:
-      "There are many words that would refresh everyday so that you would get a joy of learning new words.",
+      "You have finished the first half of the lesson. There more to explore...",
   },
+  {
+    title: "Your new journey",
+    content: "Your journey of learning a new language is waiting for you",
+  },
+  {
+    title: "What to explore next...",
+    content:
+      "Now, you can explore the rest of the lessons and practic at your own pace",
+  },
+  //   {
+  //     title: "Step 3: Daily phrases that would refresh everyday",
+  //     content:
+  //       "There are many words that would refresh everyday so that you would get a joy of learning new words.",
+  //   },
 ];
 
-const Instructions = () => {
+const Instructions2 = () => {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -30,12 +32,12 @@ const Instructions = () => {
     if (currentStep < instructionData.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      navigate("/unit/basic-phrase-1");
+      navigate("/lesson");
     }
   };
 
   const handleSkip = () => {
-    navigate("/unit/basic-phrase-1");
+    navigate("/lesson");
   };
   return (
     <div className="outer-all-component">
@@ -70,4 +72,4 @@ const Instructions = () => {
   );
 };
 
-export default Instructions;
+export default Instructions2;
