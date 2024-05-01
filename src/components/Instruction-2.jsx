@@ -32,7 +32,7 @@ const Instructions2 = () => {
     if (currentStep < instructionData.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      navigate("/lessons");
+      navigate("/lesson");
     }
   };
 

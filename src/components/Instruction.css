@@ -30,3 +30,16 @@
     justify-content: center;
     gap: 30px;
 }
+
+@media only screen and (max-width: 430px) {
+    .outer-all-component {
+        padding-top: 40px;
+    }
+    .main-instruction {
+        flex-direction: column;
+        width: 80%;
+    }
+    .instruction-picture img {
+        width: 100%;
+    }
+}
