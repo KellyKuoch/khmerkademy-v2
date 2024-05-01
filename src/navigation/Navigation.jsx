@@ -4,62 +4,58 @@ import { Link, Outlet } from "react-router-dom";
 import "./Navigation.css";
 import { auth } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
-
+import Hamburger from "./Hamburger";
 const Navigation = () => {
-  // for user sign Limitation
   const [authUser, setAuthUser] = useState(null);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+
+  const toggleHamburger = () => {
+    setHamburgerOpen(!hamburgerOpen);
+  };
+
   useEffect(() => {
-    const listen = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setAuthUser(user);
       } else {
         setAuthUser(null);
       }
     });
+    return () => unsubscribe(); // Unsubscribe on cleanup
   }, []);
 
   return (
     <Fragment>
       <div className="navbar">
         <div className="logo">
-          <Link to="/home">KhmerKademy</Link>{" "}
-          {/* Assuming you want a text logo since the image is commented out */}
+          <Link to="/home">KhmerKademy</Link>
         </div>
-        <ul>
-          {/* <li>
-            <Link className="nav-link" to="/home">
-              Home
-            </Link>
-          </li> */}
-          {/* <li>
-            <Link className="nav-link" to="/fun-facts">
-              Fun Facts
-            </Link>
-          </li> */}
+        {/* <div className="hamburger" onClick={toggleHamburger}>
+          <Hamburger />
+        </div> */}
+        <ul className={hamburgerOpen ? "" : "open"}>
           {authUser ? (
             <>
-              {/* <li>
-                <Link className="nav-link" to="/daily-phrase">
-                  Daily Khmer
-                </Link>
-              </li> */}
               <li>
-                <Link className="nav-link" to="/lesson">
+                <Link
+                  className="nav-link"
+                  to="/lesson"
+                  onClick={toggleHamburger}
+                >
                   Lessons
                 </Link>
               </li>
-              {/* <li>
-                <Link className="nav-link" to="/dictionary">
-                  Dictionary
-                </Link>
-              </li> */}
               <li>
                 <div className="profile-container">
-                  <Link className="nav-link" to="/detail">
+                  <Link
+                    className="nav-link"
+                    to="/detail"
+                    onClick={toggleHamburger}
+                  >
                     <img
                       src="/img/github-pf.png"
                       alt="Profile"
-                      className="pf-pic"
+                      className="profile-pic"
                     />
                   </Link>
                 </div>
@@ -67,7 +63,7 @@ const Navigation = () => {
             </>
           ) : (
             <li>
-              <Link className="nav-link" to="/signup">
+              <Link className="nav-link" to="/signup" onClick={toggleHamburger}>
                 Sign In
               </Link>
             </li>
@@ -78,4 +74,5 @@ const Navigation = () => {
     </Fragment>
   );
 };
+
 export default Navigation;

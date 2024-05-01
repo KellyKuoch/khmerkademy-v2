@@ -5,6 +5,7 @@ import Written from "../../PopUp/Small-Component/Written";
 import Read from "../../PopUp/Small-Component/Read";
 import Figure from "../../PopUp/Small-Component/Figure";
 import Listen from "../../PopUp/Small-Component/Listen";
+import { motion, AnimatePresence } from "framer-motion";
 const Consonants = () => {
   const [activeConsonant, setActiveConsonant] = useState(null);
   const [activeComponent, setActiveComponent] = useState("read");
@@ -354,7 +355,21 @@ const Consonants = () => {
 
       {/* Consonant Modal */}
       <div className="popup" style={popupStyle}>
+        {/* <AnimatePresence> */}
         {activeConsonant && (
+          // <motion.div
+          //   initial={{ opacity: 0, scale: 0.8 }}
+          //   animate={{ opacity: 1, scale: 1 }}
+          //   exit={{ opacity: 0, scale: 0.8 }}
+          //   transition={{ duration: 0.3 }}
+          //   style={{
+          //     position: "fixed",
+          //     top: "50%",
+          //     left: "50%",
+          //     transform: "translate(-20%, -20%)",
+          //     // width: "200px",
+          //   }}
+          // >
           <Modal
             show={Boolean(activeConsonant)}
             onClose={() => setActiveConsonant(null)}
@@ -410,7 +425,9 @@ const Consonants = () => {
               </div>
             </div>
           </Modal>
+          // </motion.div>
         )}
+        {/* </AnimatePresence> */}
       </div>
 
       <div className="consonants-title">

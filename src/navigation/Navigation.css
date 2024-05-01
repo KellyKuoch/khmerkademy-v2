@@ -46,48 +46,38 @@
   font-weight: 400;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a:focus {
   color: #777;
   transition-duration: 0.3s;
 }
 
-/* Add styles for the hamburger icon */
-.navbar .hamburger-menu {
-  display: none; /* Hide by default */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px; /* Increased clickable area */
 }
 
-/* Media query for iPhone 14 Pro and other devices with similar dimensions */
-@media only screen and (max-width: 390px) {
-  .navbar {
-    width: 100%; /* Full width */
-    padding: 0 15px; /* Adjust padding for smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
-
-  .navbar .logo a {
-    font-size: 14pt; /* Smaller font size for the logo */
-  }
-
   .navbar ul {
-    display: none; /* Hide the navigation links */
+    display: none; /* Initially hide */
+    flex-direction: column;
+    width: 50%; /* Half of the viewport width */
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Fixed position */
+    top: 0; /* Top edge aligned */
+    left: 0; /* Left edge aligned */
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.2);
+    transform: translateX(-100%); /* Start off-screen */
+    transition: transform 0.3s ease-out; /* Smooth slide in transition */
   }
-
-  .navbar .hamburger-menu {
-    display: block; /* Show the hamburger menu icon */
-    cursor: pointer;
-  }
-
-  .navbar .pf-pic {
-    width: 40px; /* Smaller profile picture */
+  .navbar ul.open {
+    display: flex; /* Display the menu when hamburger is clicked */
+    transform: translateX(0%); /* Slide in to view */
   }
 }
-
-/* Add styles for the hamburger icon when visible */
-.navbar .hamburger-menu {
-  background-image: url("./hamburger-icon.png"); /* Path to your hamburger icon */
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
-}
-
-/* Add media query for iPhone 14 Pro */
