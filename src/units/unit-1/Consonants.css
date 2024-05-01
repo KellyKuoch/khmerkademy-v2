@@ -1,122 +1,139 @@
 .consonant p {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .main-consonants {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 35px;
-    padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 30px;
 }
 
 .consonants-boxes {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-    padding-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  padding-top: 25px;
 }
 .consonant {
-    background-color: #E5DDC5;
-    border: solid black 1px;
-    border-radius: 5px;
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  background-color: #e5ddc5;
+  border: solid black 1px;
+  border-radius: 5px;
+  /* width: 1000px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .main-popup {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
 }
-  
-  
-  .garden-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* border: solid 1px; */
-    padding: 2px;
+
+.garden-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: solid 1px; */
+  padding: 2px;
+}
+
+.popup-img {
+  width: 200px;
+}
+
+.garden-care {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: solid 1px; */
+  padding: 2px;
+  width: 300px;
+  height: 250px;
+}
+
+.garden-care-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* border: solid 1px; */
+  padding: 5px;
+  width: 90%;
+}
+
+.garden-care-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: solid 1px; */
+  border-radius: 10px;
+  background-color: #f1eedc;
+  padding: 5px;
+  height: 300px;
+  width: 95%;
+}
+
+.button-1 {
+  background-color: #93bfcf;
+  /* border: solid black 1px; */
+  border-radius: 5px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #6096b4;
+  cursor: pointer;
+}
+
+.button-1:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+@media only screen and (max-width: 430px) {
+  .main-consonants {
+    max-width: 100%;
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
-  
-  .popup-img {
-    width: 200px;
+  .consonants-boxes {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(50px, auto);
   }
-  
-  .garden-care {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* border: solid 1px; */
-    padding: 2px;
-    width: 300px;
-    height: 250px;
-  }
-  
-  .garden-care-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    /* border: solid 1px; */
-    padding: 5px;
-    width: 90%;
-  }
-  
-  .garden-care-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* border: solid 1px; */
-    border-radius: 10px;
-    background-color: #f1eedc;
-    padding: 5px;
-    height: 300px;
-    width: 95%;
-  }
-  
   .button-1 {
-    
-    background-color: #93BFCF;
-    /* border: solid black 1px; */
-    border-radius: 5px;
-    width: 100px;
-    display: flex;
+    width: 80px;
+  }
+  .main-popup {
+    width: 90%;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
-      sans-serif;
-    
-  
-    padding: 8px 0.8em;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    white-space: nowrap;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
-  
-  .button-1:hover,
-  .button-1:focus {
-    background-color: #6096B4;
-    cursor: pointer;
-  }
-  
-  .button-1:focus {
-    box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
-  }
+}

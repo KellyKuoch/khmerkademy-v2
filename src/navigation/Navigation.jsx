@@ -31,28 +31,28 @@ const Navigation = () => {
               Home
             </Link>
           </li> */}
-          <li>
+          {/* <li>
             <Link className="nav-link" to="/fun-facts">
               Fun Facts
             </Link>
-          </li>
+          </li> */}
           {authUser ? (
             <>
-              <li>
+              {/* <li>
                 <Link className="nav-link" to="/daily-phrase">
                   Daily Khmer
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link className="nav-link" to="/lesson">
                   Lessons
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link className="nav-link" to="/dictionary">
                   Dictionary
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <div className="profile-container">
                   <Link className="nav-link" to="/detail">
