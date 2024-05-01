@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./Vocabulary.css";
 const Vocabulary = ({ data, onSearchChange, searchTerm }) => {
-  const [activeWord, setActiveWord] = useState(null);
-
   //Search Function - Filter out words
 
   return (

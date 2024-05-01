@@ -26,8 +26,8 @@ import ThreePhrases from "./units/unit-3/ThreePhrases.unit3";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
 import AuthDetails from "./components/AuthDetails";
-import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "./firebase";
+// import { onAuthStateChanged, signOut } from "firebase/auth";
+// import { auth } from "./firebase";
 import Instructions from "./components/Instruction";
 import Instructions2 from "./components/Instruction-2";
 import MatchingPair from "./content/MatchingPair.content";
@@ -38,7 +38,7 @@ import EachUnit from "./components/EachUnit";
 
 const App = ({ initialScore = 0, onScoreChange }) => {
   const [score, setScore] = useState(initialScore);
-  const [authUser, setAuthUser] = useState(null);
+  // const [authUser, setAuthUser] = useState(null);
 
   //Firebase authentication
   // useEffect(() => {

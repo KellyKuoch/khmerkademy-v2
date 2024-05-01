@@ -76,7 +76,7 @@ const SignUp = () => {
             ></input>
             {/* <div className="underline"></div> */}
           </div>
-          <div className="input-box">
+          <div className="input-box underline">
             <input
               type="password"
               placeholder="Enter your password"
@@ -104,7 +104,7 @@ const SignUp = () => {
             ></input>
             {/* <div className="underline"></div> */}
           </div>
-          <div className="input-box">
+          <div className="input-box underline">
             <input
               type="password"
               placeholder="Enter your password"
