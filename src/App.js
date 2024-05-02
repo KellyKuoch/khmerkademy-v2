@@ -33,6 +33,7 @@ import Instructions2 from "./components/Instruction-2";
 import MatchingPair from "./content/MatchingPair.content";
 import Lesson from "./components/Lesson";
 import EachUnit from "./components/EachUnit";
+import SentenceReorder from "./content/SentenceReorder";
 // import { auth } from "./authentication/firebase-config";
 // import SignIn from "./authentication/SignIn";
 
@@ -84,6 +85,7 @@ const App = ({ initialScore = 0, onScoreChange }) => {
           }
         />
         <Route path="exercise/matching-pair" element={<MatchingPair />} />
+        <Route path="exercise/sentence-reorder" element={<SentenceReorder />} />
         {/* <Route path="lessons" element={<Learn />} /> */}
         {/* <Route path="lessons" element={<Unit />} /> */}
         <Route path="unit/consonants" element={<Consonants />} />

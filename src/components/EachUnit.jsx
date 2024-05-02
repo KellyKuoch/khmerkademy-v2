@@ -124,6 +124,38 @@ const EachUnit = () => {
             </div>
           </div>
         </div>
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/exercise/sentence-reorder")}
+            >
+              Sentence Reordering
+            </div>
+          </div>
+        </div>
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/exercise/matching-pair")}
+            >
+              Matching Pair
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
