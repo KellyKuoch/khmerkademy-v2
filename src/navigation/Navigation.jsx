@@ -4,14 +4,12 @@ import { Link, Outlet } from "react-router-dom";
 import "./Navigation.css";
 import { auth } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import Hamburger from "./Hamburger";
+import { IoHome, IoInformationCircle, IoBook } from "react-icons/io5";
+import { MdAirplaneTicket, MdConfirmationNumber } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+
 const Navigation = () => {
   const [authUser, setAuthUser] = useState(null);
-  const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
-  const toggleHamburger = () => {
-    setHamburgerOpen(!hamburgerOpen);
-  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -30,19 +28,34 @@ const Navigation = () => {
         <div className="logo">
           <Link to="/home">KhmerKademy</Link>
         </div>
-        {/* <div className="hamburger" onClick={toggleHamburger}>
-          <Hamburger />
-        </div> */}
-        <ul className={hamburgerOpen ? "" : "open"}>
+
+        <ul>
+          <li>
+            <Link className="nav-link" to="/fun-facts" activeClassName="active">
+              <MdAirplaneTicket className="icon" size="4em" />
+              <span className="link-text">Fun Facts</span>
+            </Link>
+          </li>
           {authUser ? (
             <>
               <li>
                 <Link
                   className="nav-link"
-                  to="/lesson"
-                  onClick={toggleHamburger}
+                  to="/daily-phrase"
+                  activeClassName="active"
                 >
-                  Lessons
+                  <MdConfirmationNumber className="icon" size="4em" />
+                  <span className="link-text">Daily Khmer</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="nav-link"
+                  to="/lesson"
+                  activeClassName="active"
+                >
+                  <IoBook className="icon" size="4em" />
+                  <span className="link-text">Lessons</span>
                 </Link>
               </li>
               <li>
@@ -50,20 +63,16 @@ const Navigation = () => {
                   <Link
                     className="nav-link"
                     to="/detail"
-                    onClick={toggleHamburger}
+                    activeClassName="active"
                   >
-                    <img
-                      src="/img/github-pf.png"
-                      alt="Profile"
-                      className="profile-pic"
-                    />
+                    <CgProfile className="icon" size="4em" />
                   </Link>
                 </div>
               </li>
             </>
           ) : (
             <li>
-              <Link className="nav-link" to="/signup" onClick={toggleHamburger}>
+              <Link className="nav-link" to="/signup">
                 Sign In
               </Link>
             </li>
