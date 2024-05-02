@@ -25,8 +25,11 @@ const Navigation = () => {
   return (
     <Fragment>
       <div className="navbar">
-        <div className="logo">
-          <Link to="/home">KhmerKademy</Link>
+        <div className="logo" activeClassName="active">
+          <Link to="/home">
+            <IoHome className="icon" size="4em" />
+            <span className="link-text">KhmerKademy</span>
+          </Link>
         </div>
 
         <ul>
@@ -66,6 +69,7 @@ const Navigation = () => {
                     activeClassName="active"
                   >
                     <CgProfile className="icon" size="4em" />
+                    <span className="link-text">Profile</span>
                   </Link>
                 </div>
               </li>
