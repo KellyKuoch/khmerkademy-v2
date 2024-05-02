@@ -33,10 +33,23 @@ const AuthDetails = () => {
         <div className="left-profile">
           {authUser ? (
             <>
-              <img src="./img/github-pf.png" className="profile-pic" alt="" />
-              <p>
+              <div className="cover-picture">
+                <figure>
+                  <img
+                    src="/culture-img/kh-new-year.jpeg"
+                    className="article-photo-popup"
+                    alt="profile-cover"
+                  />
+                </figure>
+              </div>
+              <div className="main-picture">
+                <img src="./img/github-pf.png" className="profile-pic" alt="" />
+              </div>
+
+              {/* <p>
                 <strong>Email:</strong> {authUser.email}
-              </p>
+              </p> */}
+              <h3>Chingsan Ly</h3>
               <button className="button-8" onClick={userSignOut}>
                 Sign Out
               </button>
@@ -51,23 +64,7 @@ const AuthDetails = () => {
           )}
         </div>
         <div className="right-profile">
-          <div className="profile-progress">
-            <h3>Profile Progress</h3>
-            <div className="unit-progress">
-              <div className="unit-1">
-                <p>Unit 1</p>
-              </div>
-              <div className="unit-2">
-                <p>Unit 2</p>
-              </div>
-              <div className="unit-3">
-                <p>Unit 3</p>
-              </div>
-              <div className="unit-4">
-                <p>Unit 4</p>
-              </div>
-            </div>
-          </div>
+          <div className="profile-progress"></div>
           <div className="setting">
             <h3>Setting</h3>
             <div className="dark-mode">
