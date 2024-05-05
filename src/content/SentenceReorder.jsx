@@ -172,12 +172,14 @@ const SentenceReorder = () => {
           {/* </div> */}
         </DndContext>
       </div>
-      <button className="button-8" onClick={checkOrder}>
-        Check Sentence
-      </button>
-      <button className="button-8" onClick={handleNext}>
-        Next
-      </button>
+      <div className="button-container">
+        <button className="button-8" onClick={checkOrder}>
+          Check Sentence
+        </button>
+        <button className="button-8" onClick={handleNext}>
+          Next
+        </button>
+      </div>
     </div>
   );
 };

@@ -43,13 +43,14 @@ const AuthDetails = () => {
                 </figure>
               </div>
               <div className="main-picture">
-                <img src="./img/github-pf.png" className="profile-pic" alt="" />
+                <img src={authUser.photoURL} className="profile-pic" alt="" />
               </div>
 
               {/* <p>
                 <strong>Email:</strong> {authUser.email}
               </p> */}
-              <h3>Chingsan Ly</h3>
+              <h3>{authUser.displayName}</h3>
+              <p>{authUser.email}</p>
               <button className="button-8" onClick={userSignOut}>
                 Sign Out
               </button>

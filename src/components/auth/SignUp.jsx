@@ -1,5 +1,5 @@
 import "./SignUp.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
 import {
@@ -24,6 +24,7 @@ const SignUp = () => {
   //sing up
   const [signUpEmail, setSignUpEmail] = useState("");
   const [signUpPassword, setSignUpPassword] = useState("");
+  const [userProfile, setUserProfile] = useState(null);
 
   const signUp = (e) => {
     e.preventDefault();
@@ -100,6 +101,7 @@ const SignUp = () => {
     }
   };
 
+  //Retreive Email and Created day
   const createUserProfileDocument = async (userAuth, additionalData) => {
     if (!userAuth) return;
 
@@ -108,12 +110,13 @@ const SignUp = () => {
     const userSnapshot = await getDoc(userRef);
 
     if (!userSnapshot.exists()) {
-      const { email } = userAuth;
+      const { email, photoURL } = userAuth;
       const createdAt = new Date();
       try {
         await setDoc(userRef, {
           email,
           createdAt,
+          profilePicture: photoURL,
           ...additionalData,
         });
       } catch (error) {
@@ -123,6 +126,8 @@ const SignUp = () => {
 
     return userRef;
   };
+
+  //Retrieve the profile doc
 
   return (
     <div className="auth-container">
