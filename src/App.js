@@ -12,6 +12,7 @@ import Consonants from "./units/unit-1/Consonants";
 import Vowels from "./units/unit-1/Vowels";
 import OneConversation from "./units/unit-1/OneConversation";
 import TwoConversation from "./units/unit-2/TwoConversation.unit2";
+import ThreeConversation from "./units/unit-3/ThreeConversation.unit3";
 import OneVocabulary from "./units/unit-1/OneVocabulary";
 import OnePhrases from "./units/unit-1/OnePhrases.unit1";
 import TwoVocabulary from "./units/unit-2/TwoVocabulary";
@@ -128,7 +129,7 @@ const App = ({ initialScore = 0, onScoreChange }) => {
         <Route path="unit/number" element={<Number />} />
         <Route path="unit/conversation-1" element={<OneConversation />} />
         <Route path="unit/conversation-2" element={<TwoConversation />} />
-        <Route path="unit/conversation-3" element={<TwoConversation />} />
+        <Route path="unit/conversation-3" element={<ThreeConversation />} />
         <Route path="unit/grammar-1" element={<Grammar />} />
         <Route path="unit/grammar-3" element={<ThreeGrammar />} />
         <Route path="signin" element={<SignIn />} />
