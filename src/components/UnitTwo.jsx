@@ -18,40 +18,6 @@ const UnitTwo = () => {
             </div>
             <div
               className="inside-circle"
-              onClick={() => navigate("/unit/conversation-1")}
-            >
-              Conversation 1
-            </div>
-          </div>
-        </div>
-
-        <div class="progress-circle">
-          <div class="circle">
-            <div class="mask full">
-              <div class="fill"></div>
-            </div>
-            <div class="mask half">
-              <div class="fill"></div>
-            </div>
-            <div
-              className="inside-circle"
-              onClick={() => navigate("/unit/basic-phrase-1")}
-            >
-              Basic Phrase 1
-            </div>
-          </div>
-        </div>
-
-        <div class="progress-circle">
-          <div class="circle">
-            <div class="mask full">
-              <div class="fill"></div>
-            </div>
-            <div class="mask half">
-              <div class="fill"></div>
-            </div>
-            <div
-              className="inside-circle"
               onClick={() => navigate("/unit/conversation-2")}
             >
               Conversation 2
@@ -72,6 +38,22 @@ const UnitTwo = () => {
               onClick={() => navigate("/unit/basic-phrase-2")}
             >
               Basic Phrase 2
+            </div>
+          </div>
+        </div>
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/unit/flashcard")}
+            >
+              Days in Khmer
             </div>
           </div>
         </div>

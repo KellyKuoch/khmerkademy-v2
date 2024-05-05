@@ -17,14 +17,14 @@ const blankWords = [
   },
   {
     id: 2,
-    prompt: "How are you doing?",
+    prompt: "How are you doing? (with friend)",
     translation: "តើ______សុខសប្បាយទេ? (មិត្តភ័ក្ដិ)",
     phonetic: "Ter _____ sok sabbay te?",
     options: [
       { text: "តើអ្នកសុខសប្បាយទេ?", phonetic: "Ter Neak sok sabbay te?" },
       { text: "តើខ្ញុំសុខសប្បាយទេ?", phonetic: "Ter Khnom sok sabbay te?" },
-      { text: "តើឯងសុខសប្បាយទេ?", phonetic: "Aeng" },
-      { text: "តើលោកសុខសប្បាយទេ?", phonetic: "Lok" },
+      { text: "តើឯងសុខសប្បាយទេ?", phonetic: "Ter aeng sok sabbay te?" },
+      { text: "តើលោកសុខសប្បាយទេ?", phonetic: "Ter lok sok sabbay te" },
     ],
     answer: "តើឯងសុខសប្បាយទេ?",
   },
@@ -34,8 +34,11 @@ const blankWords = [
     translation: "តើអ្នកមានអាយុអ្វី?",
     phonetic: "Ter neak mean ______ avey?",
     options: [
-      { text: "តើអ្នកមានអាយុអ្វី?", phonetic: "Ah Yuk" },
-      { text: "តើអ្នកមានបងប្អូនអ្វី?", phonetic: "Bong Paoun" },
+      { text: "តើអ្នកមានអាយុអ្វី?", phonetic: "Ter nak man ah yuk avey" },
+      {
+        text: "តើអ្នកមានបងប្អូនអ្វី?",
+        phonetic: "Ter nak man bong paoun avey",
+      },
       { text: "តើអ្នកមានបងស្រីអ្វី?", phonetic: "Bong Srei" },
       { text: "តើអ្នកមានឈ្មោះអ្វី?", phonetic: "Chamous" },
     ],

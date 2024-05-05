@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 45px;
 }
 
 .profile-detail-container {
@@ -51,7 +51,7 @@ figure {
   overflow: hidden;
   border-radius: 13px;
 }
-.cover-picture img {
+.cover-picture-detail img {
   max-width: 100%;
   transform-origin: center;
   transform: scale(var(--img-scale));

@@ -47,11 +47,77 @@ const SentenceReorder = () => {
       correctOrder: ["ខ្ញុំ  khnom", "ឈ្មោះ  chamous", "ថា  tha", "ទេវី  Tevy"],
       englishWords: "My name is Tevy.",
     },
+    {
+      id: 2,
+      initialWords: [
+        "អ្នក nak",
+        "អ្វី avey",
+        "តើ Ter",
+        "ឈ្មោះ chmus",
+        "មាន man",
+      ],
+      correctOrder: [
+        "តើ Ter",
+        "អ្នក nak",
+        "មាន man",
+        "ឈ្មោះ chmus",
+        "អ្វី avey",
+      ],
+      englishWords: "What is your name?",
+    },
+    {
+      id: 3,
+      initialWords: ["សុខ sok", "ទេ te", "អ្នក nak", "សប្បាយ sabay", "តើ Ter"],
+      correctOrder: ["តើ Ter", "អ្នក nak", "សុខ sok", "សប្បាយ sabay", "ទេ te"],
+      englishWords: "How are you doing?",
+    },
+    {
+      id: 4,
+      initialWords: [
+        "មក mok",
+        "ពី pi",
+        "អ្នក nak",
+        "ប្រទេស protes",
+        "តើ Ter",
+        "ណា na",
+      ],
+      correctOrder: [
+        "តើ Ter",
+        "អ្នក nak",
+        "មក mok",
+        "ពី pi",
+        "ប្រទេស protes",
+        "ណា na",
+      ],
+      englishWords: "How are you doing?",
+    },
+    {
+      id: 5,
+      initialWords: [
+        "សប្បាយ sabay",
+        "ទេ te",
+        "សុខ sok",
+        "ជា jea",
+        "ធម្មតា thomada",
+        "ខ្ញុំ Khnom",
+      ],
+      correctOrder: [
+        "ខ្ញុំ Khnom",
+        "សុខ sok",
+        "សប្បាយ sabay",
+        "ជា jea",
+        "ធម្មតា thomada",
+        "ទេ te",
+      ],
+      englishWords: "How are you doing?",
+    },
   ];
   const firstWord = reorderedWords[0];
-
-  const [words, setWords] = useState(firstWord.initialWords);
-  const [correctOrder] = useState(firstWord.correctOrder);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [words, setWords] = useState(reorderedWords[currentIndex].initialWords);
+  const [correctOrder, setCorrectOrder] = useState(
+    reorderedWords[currentIndex].correctOrder
+  );
 
   const sensors = useSensors(useSensor(PointerSensor));
 
@@ -64,6 +130,13 @@ const SentenceReorder = () => {
         return arrayMove(currentWords, oldIndex, newIndex);
       });
     }
+  };
+
+  const handleNext = () => {
+    const nextIndex = (currentIndex + 1) % reorderedWords.length;
+    setCurrentIndex(nextIndex);
+    setWords(reorderedWords[nextIndex].initialWords);
+    setCorrectOrder(reorderedWords[nextIndex].correctOrder);
   };
   const checkOrder = () => {
     if (JSON.stringify(words) === JSON.stringify(correctOrder)) {
@@ -101,6 +174,9 @@ const SentenceReorder = () => {
       </div>
       <button className="button-8" onClick={checkOrder}>
         Check Sentence
+      </button>
+      <button className="button-8" onClick={handleNext}>
+        Next
       </button>
     </div>
   );

@@ -77,7 +77,7 @@ const App = ({ initialScore = 0, onScoreChange }) => {
         <Route path="fun-facts" element={<Culture />} />
         {/* <Route path="exercise" element={<Exercise />} /> */}
         <Route path="exercise/fill-the-blank" element={<FillTheBlank />} />
-        <Route path="exercise/flashcard" element={<Flashcard />} />
+        <Route path="unit/flashcard" element={<Flashcard />} />
         <Route
           path="exercise/quiz"
           element={

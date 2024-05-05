@@ -33,8 +33,8 @@ const AuthDetails = () => {
         <div className="left-profile">
           {authUser ? (
             <>
-              <div className="cover-picture">
-                <figure>
+              <div className="cover-picture-detail">
+                <figure className="cover-picture-detail">
                   <img
                     src="/culture-img/kh-new-year.jpeg"
                     className="article-photo-popup"
