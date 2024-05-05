@@ -435,7 +435,7 @@ const Consonants = () => {
       </div>
       <div className="consonants-boxes">
         {consonants.map((item) => (
-          <button className="consonant" style={{ fontSize: "25px" }}>
+          <button className="button-1" style={{ fontSize: "25px" }}>
             <span>
               <strong>{item.name}</strong>
             </span>

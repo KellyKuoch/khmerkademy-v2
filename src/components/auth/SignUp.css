@@ -88,6 +88,13 @@
   background: linear-gradient(to left, #99004d 0%, #ff0080 100%);
 }
 
+.sign-button-container {
+  padding-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+
 @media only screen and (max-width: 430px) {
   .auth-container {
     padding-top: 20px;
