@@ -34,6 +34,8 @@ import MatchingPair from "./content/MatchingPair.content";
 import Lesson from "./components/Lesson";
 import EachUnit from "./components/EachUnit";
 import SentenceReorder from "./content/SentenceReorder";
+import UnitTwo from "./components/UnitTwo";
+import UnitThree from "./components/UnitThree";
 // import { auth } from "./authentication/firebase-config";
 // import SignIn from "./authentication/SignIn";
 
@@ -70,6 +72,8 @@ const App = ({ initialScore = 0, onScoreChange }) => {
         <Route path="daily-phrase" element={<DailyPhrase />} />
         <Route path="lesson" element={<Lesson />} />
         <Route path="unit-1" element={<EachUnit />} />
+        <Route path="unit-2" element={<UnitTwo />} />
+        <Route path="unit-3" element={<UnitThree />} />
         <Route path="fun-facts" element={<Culture />} />
         {/* <Route path="exercise" element={<Exercise />} /> */}
         <Route path="exercise/fill-the-blank" element={<FillTheBlank />} />
