@@ -85,28 +85,6 @@ export default function App() {
           </Link>
         </div>
       </div>
-      <div className="footer-container">
-        <div className="decriptions">
-          <h2>Learn about Cambodia rich culture</h2>
-          <p>Explore events and celebration in Cambodia</p>
-        </div>
-        <img
-          className="image-class"
-          src="https://placehold.co/600x400.png"
-          alt=""
-        />
-      </div>
-      <div className="footer-container">
-        <img
-          className="image-class"
-          src="https://placehold.co/600x400.png"
-          alt=""
-        />
-        <div className="decriptions">
-          <h2>Welcome to KhmerKademy</h2>
-          <p>Your new language learning journey starts here</p>
-        </div>
-      </div>
     </div>
   );
 }
