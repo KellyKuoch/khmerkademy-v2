@@ -1,7 +1,11 @@
+import { Canvas } from "./Canvas";
+import { ClearCanvasButton } from "./ClearCanvasButton";
+
 const Written = () => {
   return (
     <div>
-      <h3>This is Written Component</h3>
+      <Canvas />
+      <ClearCanvasButton />
     </div>
   );
 };

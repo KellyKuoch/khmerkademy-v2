@@ -26,7 +26,7 @@ export default function App() {
                 Sign In
               </Link>
             ) : (
-              <Link className="button-8" to="/unit/basic-phrase-1">
+              <Link className="button-8" to="/lesson">
                 Continue your journey
               </Link>
             )}

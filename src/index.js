@@ -4,16 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { CanvasProvider } from "./PopUp/Small-Component/CanvasContext";
 // import { UserProvider } from "./authentication/user.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      {/* <UserProvider> */}
-      <App />
-      {/* </UserProvider> */}
-    </BrowserRouter>
+    <CanvasProvider>
+      <BrowserRouter>
+        {/* <UserProvider> */}
+        <App />
+        {/* </UserProvider> */}
+      </BrowserRouter>
+    </CanvasProvider>
   </React.StrictMode>
 );
 
