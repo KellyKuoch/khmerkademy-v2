@@ -16,6 +16,8 @@ const firebaseConfig = {
   appId: "1:135891295305:web:2030bdd717afdf7ea37398",
 };
 
+// Save User Progress
+
 //Firebase Firestore
 // const db = getFirestore(app);
 // Initialize Firebase

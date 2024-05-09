@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Conversation.unit.css";
 import { Link } from "react-router-dom";
-const Conversation = ({ data, handleNext }) => {
+const Conversation = ({ data, handleNext, user }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleContinue = () => {

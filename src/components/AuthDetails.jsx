@@ -33,15 +33,7 @@ const AuthDetails = () => {
         <div className="left-profile">
           {authUser ? (
             <>
-              <div className="cover-picture-detail">
-                <figure className="cover-picture-detail">
-                  <img
-                    src="/culture-img/kh-new-year.jpeg"
-                    className="article-photo-popup"
-                    alt="profile-cover"
-                  />
-                </figure>
-              </div>
+              <div className="cover-picture-detail"></div>
               <div className="main-picture">
                 <img src={authUser.photoURL} className="profile-pic" alt="" />
               </div>
@@ -65,13 +57,17 @@ const AuthDetails = () => {
           )}
         </div>
         <div className="right-profile">
-          <div className="profile-progress"></div>
-          <div className="setting">
-            <h3>Setting</h3>
-            <div className="dark-mode">
-              <p>Dark Mode</p>
-            </div>
-          </div>
+          <h3>Progress</h3>
+          <p>
+            Unit 1: <span>90%</span>
+          </p>
+          <p>
+            Unit 2: <span>10%</span>
+          </p>
+          <p>
+            Unit 3: <span>0%</span>
+          </p>
+
           <div className="profile-detail">
             <h3>Profile detail</h3>
             <p>
