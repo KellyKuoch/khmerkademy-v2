@@ -30,12 +30,12 @@ const Instructions = () => {
     if (currentStep < instructionData.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      navigate("/unit/basic-phrase-1");
+      navigate("/lesson");
     }
   };
 
   const handleSkip = () => {
-    navigate("/unit/basic-phrase-1");
+    navigate("/lesson");
   };
   return (
     <div className="outer-all-component">

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Conversation.unit.css";
 import { Link } from "react-router-dom";
-const Conversation = ({ data, handleNext }) => {
+const Conversation = ({ data, handleNext, user }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleContinue = () => {
@@ -37,7 +37,7 @@ const Conversation = ({ data, handleNext }) => {
               renderMessage(data.student_a, "convo-left", currentIndex)}
           </div>
           <img
-            src="../section-img/sonic.png"
+            src="../section-img/white-khmer-girl.png"
             alt="left-person"
             className="convo-img"
           />
@@ -48,7 +48,7 @@ const Conversation = ({ data, handleNext }) => {
               renderMessage(data.student_b, "convo-right", currentIndex)}
           </div>
           <img
-            src="../section-img/toroto.png"
+            src="../section-img/white-khmer-boy.png"
             alt="left-person"
             className="convo-img"
           />

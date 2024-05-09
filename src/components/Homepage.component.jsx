@@ -17,28 +17,29 @@ export default function App() {
   }, []);
   return (
     <div className="main-homepage">
+      <h1>Welcome to Khmerkademy! </h1>
       <div className="top-container">
         <div className="left-top">
-          <h2>Learn a language for free. Forever</h2>
+          <h2>Your Journey Await... </h2>
           <div className="button-row">
             {!authUser ? (
               <Link className="button-8" to="/signup">
                 Sign In
               </Link>
             ) : (
-              <Link className="button-8" to="/unit/basic-phrase-1">
-                Continue your journey
+              <Link className="button-8" to="/lesson">
+                Continue Learning
               </Link>
             )}
           </div>
         </div>
         <img
           className="image-class"
-          src="./img/angkor-homepage-small.jpg"
+          src="./img/angkor-wat-cartoon.png"
           alt="top-pic"
         />
       </div>
-      <div className="middle-container">
+      {/* <div className="middle-container">
         <h2>Gamification poured into every lesson</h2>
         <div className="lesson-preview">
           <div className="lesson-container">
@@ -74,39 +75,7 @@ export default function App() {
             <h3>New Lesson Every Week</h3>
           </div>
         </div>
-      </div>
-      <div className="footer-container">
-        <img className="image-class" src="./img/khmer-language.png" alt="" />
-        <div className="decriptions">
-          <h2>Welcome to KhmerKademy</h2>
-          <p>Your new language learning journey starts here</p>
-          <Link to="/learn/section-1" className="button-8">
-            Sign Up
-          </Link>
-        </div>
-      </div>
-      <div className="footer-container">
-        <div className="decriptions">
-          <h2>Learn about Cambodia rich culture</h2>
-          <p>Explore events and celebration in Cambodia</p>
-        </div>
-        <img
-          className="image-class"
-          src="https://placehold.co/600x400.png"
-          alt=""
-        />
-      </div>
-      <div className="footer-container">
-        <img
-          className="image-class"
-          src="https://placehold.co/600x400.png"
-          alt=""
-        />
-        <div className="decriptions">
-          <h2>Welcome to KhmerKademy</h2>
-          <p>Your new language learning journey starts here</p>
-        </div>
-      </div>
+      </div> */}
     </div>
   );
 }

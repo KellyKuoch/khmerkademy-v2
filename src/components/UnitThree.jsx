@@ -1,6 +1,6 @@
 import "./EachUnit.css";
 import { Link, useNavigate } from "react-router-dom";
-const EachUnit = () => {
+const UnitThree = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -8,38 +8,6 @@ const EachUnit = () => {
       <div className="main-unit">
         {/* <Link to="/unit/consonants">Consonants</Link> */}
 
-        <div class="progress-circle">
-          <div class="circle">
-            <div class="mask full">
-              <div class="fill"></div>
-            </div>
-            <div class="mask half">
-              <div class="fill"></div>
-            </div>
-            <div
-              className="inside-circle"
-              onClick={() => navigate("/unit/consonants")}
-            >
-              Consonants
-            </div>
-          </div>
-        </div>
-        <div class="progress-circle">
-          <div class="circle">
-            <div class="mask full">
-              <div class="fill"></div>
-            </div>
-            <div class="mask half">
-              <div class="fill"></div>
-            </div>
-            <div
-              className="inside-circle"
-              onClick={() => navigate("/unit/vowels")}
-            >
-              Vowels
-            </div>
-          </div>
-        </div>
         <div class="progress-circle">
           <div class="circle">
             <div class="mask full">
@@ -70,6 +38,40 @@ const EachUnit = () => {
               onClick={() => navigate("/unit/basic-phrase-1")}
             >
               Basic Phrase 1
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/unit/conversation-2")}
+            >
+              Conversation 2
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/unit/basic-phrase-2")}
+            >
+              Basic Phrase 2
             </div>
           </div>
         </div>
@@ -127,4 +129,4 @@ const EachUnit = () => {
   );
 };
 
-export default EachUnit;
+export default UnitThree;

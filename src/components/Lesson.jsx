@@ -19,10 +19,7 @@ const Lesson = () => {
           className="unit-img"
         />
       </div>
-      <div
-        className="small-unit"
-        onClick={() => navigate("/unit/basic-phrase-1")}
-      >
+      <div className="small-unit" onClick={() => navigate("/unit-2")}>
         <div className="">
           <div className="logo">
             <h3>Expand your skill!</h3>
@@ -32,10 +29,7 @@ const Lesson = () => {
         </div>
         <img src="./img/unit_2_khmer.png" alt="small-unit" />
       </div>
-      <div
-        className="small-unit"
-        onClick={() => navigate("/unit/basic-phrase-1")}
-      >
+      <div className="small-unit" onClick={() => navigate("/unit-3")}>
         <div className="">
           <div className="logo">
             <h3>Refine your skills!</h3>

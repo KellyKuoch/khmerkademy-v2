@@ -4,63 +4,72 @@ import { Link, Outlet } from "react-router-dom";
 import "./Navigation.css";
 import { auth } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { IoHome, IoInformationCircle, IoBook } from "react-icons/io5";
+import { MdAirplaneTicket, MdConfirmationNumber } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
 
 const Navigation = () => {
-  // for user sign Limitation
   const [authUser, setAuthUser] = useState(null);
+
   useEffect(() => {
-    const listen = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setAuthUser(user);
       } else {
         setAuthUser(null);
       }
     });
+    return () => unsubscribe(); // Unsubscribe on cleanup
   }, []);
 
   return (
     <Fragment>
       <div className="navbar">
-        <div className="logo">
-          <Link to="/home">KhmerKademy</Link>{" "}
-          {/* Assuming you want a text logo since the image is commented out */}
+        <div className="logo" activeClassName="active">
+          <Link to="/home">
+            <IoHome className="icon" size="4em" />
+            <span className="link-text">KhmerKademy</span>
+          </Link>
         </div>
+
         <ul>
-          {/* <li>
-            <Link className="nav-link" to="/home">
-              Home
+          <li>
+            <Link className="nav-link" to="/fun-facts" activeClassName="active">
+              <MdAirplaneTicket className="icon" size="4em" />
+              <span className="link-text">Fun Facts</span>
             </Link>
-          </li> */}
-          {/* <li>
-            <Link className="nav-link" to="/fun-facts">
-              Fun Facts
-            </Link>
-          </li> */}
+          </li>
           {authUser ? (
             <>
-              {/* <li>
-                <Link className="nav-link" to="/daily-phrase">
-                  Daily Khmer
-                </Link>
-              </li> */}
               <li>
-                <Link className="nav-link" to="/lesson">
-                  Lessons
+                <Link
+                  className="nav-link"
+                  to="/daily-phrase"
+                  activeClassName="active"
+                >
+                  <MdConfirmationNumber className="icon" size="4em" />
+                  <span className="link-text">Daily Khmer</span>
                 </Link>
               </li>
-              {/* <li>
-                <Link className="nav-link" to="/dictionary">
-                  Dictionary
+              <li>
+                <Link
+                  className="nav-link"
+                  to="/lesson"
+                  activeClassName="active"
+                >
+                  <IoBook className="icon" size="4em" />
+                  <span className="link-text">Lessons</span>
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <div className="profile-container">
-                  <Link className="nav-link" to="/detail">
-                    <img
-                      src="/img/github-pf.png"
-                      alt="Profile"
-                      className="pf-pic"
-                    />
+                  <Link
+                    className="nav-link"
+                    to="/detail"
+                    activeClassName="active"
+                  >
+                    <CgProfile className="icon" size="4em" />
+                    <span className="link-text">Profile</span>
                   </Link>
                 </div>
               </li>
@@ -78,4 +87,5 @@ const Navigation = () => {
     </Fragment>
   );
 };
+
 export default Navigation;

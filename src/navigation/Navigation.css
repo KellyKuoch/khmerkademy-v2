@@ -3,7 +3,7 @@
 .navbar {
   height: 60px;
   width: 800px;
-  max-width: 98%;
+  max-width: 100%;
   margin: auto;
   margin-top: 40px;
   box-sizing: border-box;
@@ -17,8 +17,9 @@
   padding: 0 20px;
 }
 
-.pf-pic {
-  width: 50px;
+.profile-pic {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -46,48 +47,53 @@
   font-weight: 400;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a:focus {
   color: #777;
   transition-duration: 0.3s;
 }
 
-/* Add styles for the hamburger icon */
-.navbar .hamburger-menu {
-  display: none; /* Hide by default */
+.navbar a.active {
+  color: #000;
 }
 
-/* Media query for iPhone 14 Pro and other devices with similar dimensions */
-@media only screen and (max-width: 390px) {
-  .navbar {
-    width: 100%; /* Full width */
-    padding: 0 15px; /* Adjust padding for smaller screens */
-  }
-
-  .navbar .logo a {
-    font-size: 14pt; /* Smaller font size for the logo */
-  }
-
-  .navbar ul {
-    display: none; /* Hide the navigation links */
-  }
-
-  .navbar .hamburger-menu {
-    display: block; /* Show the hamburger menu icon */
-    cursor: pointer;
-  }
-
-  .navbar .pf-pic {
-    width: 40px; /* Smaller profile picture */
-  }
-}
-
-/* Add styles for the hamburger icon when visible */
-.navbar .hamburger-menu {
-  background-image: url("./hamburger-icon.png"); /* Path to your hamburger icon */
-  background-size: contain;
-  background-repeat: no-repeat;
+.icon {
+  display: none;
   width: 30px;
-  height: 30px;
 }
 
-/* Add media query for iPhone 14 Pro */
+/* .link-text {
+  display: block;
+} */
+
+@media (max-width: 430px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .navbar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .icon {
+    display: block; /* Show icons on smaller screens */
+  }
+
+  .link-text {
+    display: none; /* Hide text on smaller screens */
+  }
+
+  .logo {
+    display: none;
+  }
+}

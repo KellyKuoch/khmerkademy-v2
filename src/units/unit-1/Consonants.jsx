@@ -5,6 +5,7 @@ import Written from "../../PopUp/Small-Component/Written";
 import Read from "../../PopUp/Small-Component/Read";
 import Figure from "../../PopUp/Small-Component/Figure";
 import Listen from "../../PopUp/Small-Component/Listen";
+import { motion, AnimatePresence } from "framer-motion";
 const Consonants = () => {
   const [activeConsonant, setActiveConsonant] = useState(null);
   const [activeComponent, setActiveComponent] = useState("read");
@@ -36,7 +37,7 @@ const Consonants = () => {
     {
       id: 1,
       name: "ក",
-      pronoun: "kâ",
+      pronoun: "ka",
       subScript: "្ក",
       khmerWord: "ក្តាម",
       englishWord: "Crab",
@@ -45,7 +46,7 @@ const Consonants = () => {
     {
       id: 2,
       name: "ខ",
-      pronoun: "khâ",
+      pronoun: "kha",
       subScript: "្ខ",
       khmerWord: "ខ្លា",
       englishWord: "Tiger",
@@ -54,7 +55,7 @@ const Consonants = () => {
     {
       id: 3,
       name: "គ",
-      pronoun: "kô",
+      pronoun: "ko",
       subScript: "្គ",
       khmerWord: "គោ",
       englishWord: "Cow",
@@ -63,7 +64,7 @@ const Consonants = () => {
     {
       id: 4,
       name: "ឃ",
-      pronoun: "khô",
+      pronoun: "kho",
       subScript: "្ឃ",
       khmerWord: "ឃ្មុំ",
       englishWord: "Bees",
@@ -72,7 +73,7 @@ const Consonants = () => {
     {
       id: 5,
       name: "ង",
-      pronoun: "ngô",
+      pronoun: "ngo",
       subScript: "្ង",
       khmerWord: "ងៀត",
       englishWord: "Dried fish",
@@ -81,7 +82,7 @@ const Consonants = () => {
     {
       id: 6,
       name: "ច",
-      pronoun: "châ",
+      pronoun: "cha",
       subScript: "្ច",
       khmerWord: "ចាប",
       englishWord: "Bird",
@@ -90,7 +91,7 @@ const Consonants = () => {
     {
       id: 7,
       name: "ឆ",
-      pronoun: "chhâ",
+      pronoun: "chha",
       subScript: "្ឆ",
       khmerWord: "ឆ្កែ",
       englishWord: "Dog",
@@ -99,7 +100,7 @@ const Consonants = () => {
     {
       id: 8,
       name: "ជ",
-      pronoun: "chô",
+      pronoun: "cho",
       subScript: "្ជ",
       khmerWord: "ជ្រូក",
       englishWord: "Pig",
@@ -108,7 +109,7 @@ const Consonants = () => {
     {
       id: 9,
       name: "ឈ",
-      pronoun: "chhô",
+      pronoun: "chho",
       subScript: "្ឈ",
       khmerWord: "ឈ្លូស",
       englishWord: "Deer",
@@ -117,7 +118,7 @@ const Consonants = () => {
     {
       id: 10,
       name: "ញ",
-      pronoun: "nhô",
+      pronoun: "nho",
       subScript: "្ញ",
       khmerWord: "ញញ៉ួរ",
       englishWord: "Hammer",
@@ -126,7 +127,7 @@ const Consonants = () => {
     {
       id: 11,
       name: "ដ",
-      pronoun: "dâ",
+      pronoun: "da",
       subScript: "្ដ",
       khmerWord: "ដំរី",
       englishWord: "Elephant",
@@ -135,7 +136,7 @@ const Consonants = () => {
     {
       id: 12,
       name: "ឋ",
-      pronoun: "thâ",
+      pronoun: "tha",
       subScript: "្ឋ",
       khmerWord: "",
       englishWord: "",
@@ -144,7 +145,7 @@ const Consonants = () => {
     {
       id: 13,
       name: "ឌ",
-      pronoun: "dô",
+      pronoun: "do",
       subScript: "",
       khmerWord: "ឌុកឌឺ",
       englishWord: "Worm",
@@ -153,7 +154,7 @@ const Consonants = () => {
     {
       id: 14,
       name: "ឍ",
-      pronoun: "thô",
+      pronoun: "tho",
       subScript: "្ឍ",
       khmerWord: "ឍាមរ៉ា",
       englishWord: "Dodo",
@@ -162,7 +163,7 @@ const Consonants = () => {
     {
       id: 15,
       name: "ណ",
-      pronoun: "nâ",
+      pronoun: "nno",
       subScript: "្ណ",
       khmerWord: "រណា",
       englishWord: "Saw",
@@ -171,7 +172,7 @@ const Consonants = () => {
     {
       id: 16,
       name: "ត",
-      pronoun: "tâ",
+      pronoun: "ta",
       subScript: "្ត",
       khmerWord: "តា",
       englishWord: "Grandpa",
@@ -180,7 +181,7 @@ const Consonants = () => {
     {
       id: 17,
       name: "ថ",
-      pronoun: "thâ",
+      pronoun: "tha",
       subScript: "្ថ",
       khmerWord: "ថូផ្កា",
       englishWord: "Vase",
@@ -189,7 +190,7 @@ const Consonants = () => {
     {
       id: 18,
       name: "ទ",
-      pronoun: "tô",
+      pronoun: "to",
       subScript: "្ទ",
       khmerWord: "ទា",
       englishWord: "Duck",
@@ -198,7 +199,7 @@ const Consonants = () => {
     {
       id: 19,
       name: "ធ",
-      pronoun: "thô",
+      pronoun: "tho",
       subScript: "្ធ",
       khmerWord: "ធ្នូរ",
       englishWord: "Bow",
@@ -207,7 +208,7 @@ const Consonants = () => {
     {
       id: 20,
       name: "ន",
-      pronoun: "nô",
+      pronoun: "no",
       subScript: "្ន",
       khmerWord: "នាគ",
       englishWord: "Dragon",
@@ -216,7 +217,7 @@ const Consonants = () => {
     {
       id: 21,
       name: "ប",
-      pronoun: "bâ",
+      pronoun: "ba",
       subScript: "្ប",
       khmerWord: "បបែល",
       englishWord: "Stringray",
@@ -225,7 +226,7 @@ const Consonants = () => {
     {
       id: 22,
       name: "ផ",
-      pronoun: "phâ",
+      pronoun: "pha",
       subScript: "្ផ",
       khmerWord: "ផួយ",
       englishWord: "Blanket",
@@ -234,7 +235,7 @@ const Consonants = () => {
     {
       id: 23,
       name: "ព",
-      pronoun: "pô",
+      pronoun: "po",
       subScript: "្ព",
       khmerWord: "ពពែរ",
       englishWord: "Goat",
@@ -243,7 +244,7 @@ const Consonants = () => {
     {
       id: 24,
       name: "ភ",
-      pronoun: "phô",
+      pronoun: "pho",
       subScript: "្ភ",
       khmerWord: "ភេ",
       englishWord: "Seal",
@@ -252,7 +253,7 @@ const Consonants = () => {
     {
       id: 25,
       name: "ម",
-      pronoun: "mô",
+      pronoun: "mo",
       subScript: "្ម",
       khmerWord: "មាន់",
       englishWord: "Hen",
@@ -261,7 +262,7 @@ const Consonants = () => {
     {
       id: 26,
       name: "យ",
-      pronoun: "yô",
+      pronoun: "yo",
       subScript: "្យ",
       khmerWord: "យក្ស",
       englishWord: "Giant",
@@ -270,7 +271,7 @@ const Consonants = () => {
     {
       id: 27,
       name: "រ",
-      pronoun: "rô",
+      pronoun: "ro",
       subScript: "្រ",
       khmerWord: "រុយ",
       englishWord: "Flies",
@@ -279,7 +280,7 @@ const Consonants = () => {
     {
       id: 28,
       name: "ល",
-      pronoun: "lô",
+      pronoun: "lo",
       subScript: "្ល",
       khmerWord: "លា",
       englishWord: "Donkey",
@@ -288,7 +289,7 @@ const Consonants = () => {
     {
       id: 29,
       name: "វ",
-      pronoun: "vô",
+      pronoun: "vo",
       subScript: "្វ",
       khmerWord: "វត្ត",
       englishWord: "Temple",
@@ -297,7 +298,7 @@ const Consonants = () => {
     {
       id: 30,
       name: "ស",
-      pronoun: "sâ",
+      pronoun: "sa",
       subScript: "្ស",
       khmerWord: "សេះ",
       englishWord: "Horse",
@@ -306,7 +307,7 @@ const Consonants = () => {
     {
       id: 31,
       name: "ហ",
-      pronoun: "hâ",
+      pronoun: "ho",
       subScript: "្ហ",
       khmerWord: "ហង្ស",
       englishWord: "Pheonix",
@@ -315,7 +316,7 @@ const Consonants = () => {
     {
       id: 32,
       name: "ឡ",
-      pronoun: "la",
+      pronoun: "lo",
       subScript: "្ឡ",
       khmerWord: "ឡាន",
       englishWord: "Car",
@@ -324,7 +325,7 @@ const Consonants = () => {
     {
       id: 33,
       name: "អ",
-      pronoun: "lâ",
+      pronoun: "'a",
       subScript: "្អ",
       khmerWord: "អណ្តើក",
       englishWord: "Turtle",
@@ -354,7 +355,21 @@ const Consonants = () => {
 
       {/* Consonant Modal */}
       <div className="popup" style={popupStyle}>
+        {/* <AnimatePresence> */}
         {activeConsonant && (
+          // <motion.div
+          //   initial={{ opacity: 0, scale: 0.8 }}
+          //   animate={{ opacity: 1, scale: 1 }}
+          //   exit={{ opacity: 0, scale: 0.8 }}
+          //   transition={{ duration: 0.3 }}
+          //   style={{
+          //     position: "fixed",
+          //     top: "50%",
+          //     left: "50%",
+          //     transform: "translate(-20%, -20%)",
+          //     // width: "200px",
+          //   }}
+          // >
           <Modal
             show={Boolean(activeConsonant)}
             onClose={() => setActiveConsonant(null)}
@@ -410,7 +425,9 @@ const Consonants = () => {
               </div>
             </div>
           </Modal>
+          // </motion.div>
         )}
+        {/* </AnimatePresence> */}
       </div>
 
       <div className="consonants-title">
@@ -418,7 +435,7 @@ const Consonants = () => {
       </div>
       <div className="consonants-boxes">
         {consonants.map((item) => (
-          <button className="consonant" style={{ fontSize: "25px" }}>
+          <button className="button-1" style={{ fontSize: "25px" }}>
             <span>
               <strong>{item.name}</strong>
             </span>

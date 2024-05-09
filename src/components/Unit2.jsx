@@ -1,6 +1,6 @@
 import "./EachUnit.css";
 import { Link, useNavigate } from "react-router-dom";
-const EachUnit = () => {
+const UnitTwo = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -18,9 +18,9 @@ const EachUnit = () => {
             </div>
             <div
               className="inside-circle"
-              onClick={() => navigate("/unit/consonants")}
+              onClick={() => navigate("/unit/basic-phrase-2")}
             >
-              Consonants
+              Basic Phrase
             </div>
           </div>
         </div>
@@ -34,9 +34,9 @@ const EachUnit = () => {
             </div>
             <div
               className="inside-circle"
-              onClick={() => navigate("/unit/vowels")}
+              onClick={() => navigate("/unit/conversation-2")}
             >
-              Vowels
+              Conversation
             </div>
           </div>
         </div>
@@ -50,9 +50,9 @@ const EachUnit = () => {
             </div>
             <div
               className="inside-circle"
-              onClick={() => navigate("/unit/conversation-1")}
+              onClick={() => navigate("/unit/grammar-1")}
             >
-              Conversation 1
+              Grammar
             </div>
           </div>
         </div>
@@ -67,9 +67,9 @@ const EachUnit = () => {
             </div>
             <div
               className="inside-circle"
-              onClick={() => navigate("/unit/basic-phrase-1")}
+              onClick={() => navigate("/exercise/flashcard")}
             >
-              Basic Phrase 1
+              Days in Khmer
             </div>
           </div>
         </div>
@@ -100,9 +100,9 @@ const EachUnit = () => {
             </div>
             <div
               className="inside-circle"
-              onClick={() => navigate("/exercise/sentence-reorder")}
+              onClick={() => navigate("/exercise/fill-the-blank")}
             >
-              Sentence Reordering
+              Fill in the blank
             </div>
           </div>
         </div>
@@ -127,4 +127,4 @@ const EachUnit = () => {
   );
 };
 
-export default EachUnit;
+export default UnitTwo;

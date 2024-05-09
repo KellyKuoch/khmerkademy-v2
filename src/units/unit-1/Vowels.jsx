@@ -211,12 +211,12 @@ const Vowels = () => {
       </div>
       <div className="consonants-boxes">
         {vowels.map((item) => (
-          <div className="consonant" style={{ fontSize: "25px" }}>
-            <p>
+          <div className="button-1" style={{ fontSize: "25px" }}>
+            <span>
               <strong>{item.name}</strong>
-            </p>
+            </span>
 
-            <p>{item.pronoun}</p>
+            <span>{item.pronoun}</span>
           </div>
         ))}
       </div>
@@ -225,11 +225,11 @@ const Vowels = () => {
       </div>
       <div className="consonants-boxes">
         {independentVowels.map((item) => (
-          <div className="consonant" style={{ fontSize: "25px" }}>
-            <p>
+          <div className="button-1" style={{ fontSize: "25px" }}>
+            <span>
               <strong>{item.name}</strong>
-            </p>
-            <p>{item.pronoun}</p>
+            </span>
+            <span>{item.pronoun}</span>
           </div>
         ))}
       </div>

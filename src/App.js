@@ -12,6 +12,7 @@ import Consonants from "./units/unit-1/Consonants";
 import Vowels from "./units/unit-1/Vowels";
 import OneConversation from "./units/unit-1/OneConversation";
 import TwoConversation from "./units/unit-2/TwoConversation.unit2";
+import ThreeConversation from "./units/unit-3/ThreeConversation.unit3";
 import OneVocabulary from "./units/unit-1/OneVocabulary";
 import OnePhrases from "./units/unit-1/OnePhrases.unit1";
 import TwoVocabulary from "./units/unit-2/TwoVocabulary";
@@ -33,6 +34,9 @@ import Instructions2 from "./components/Instruction-2";
 import MatchingPair from "./content/MatchingPair.content";
 import Lesson from "./components/Lesson";
 import EachUnit from "./components/EachUnit";
+import SentenceReoder from "./content/SentenceReorder";
+import UnitTwo from "./components/Unit2";
+import UnitThree from "./components/UnitThree";
 // import { auth } from "./authentication/firebase-config";
 // import SignIn from "./authentication/SignIn";
 
@@ -69,6 +73,8 @@ const App = ({ initialScore = 0, onScoreChange }) => {
         <Route path="daily-phrase" element={<DailyPhrase />} />
         <Route path="lesson" element={<Lesson />} />
         <Route path="unit-1" element={<EachUnit />} />
+        <Route path="unit-2" element={<UnitTwo />} />
+        <Route path="unit-3" element={<UnitThree />} />
         <Route path="fun-facts" element={<Culture />} />
         {/* <Route path="exercise" element={<Exercise />} /> */}
         <Route path="exercise/fill-the-blank" element={<FillTheBlank />} />
@@ -84,6 +90,7 @@ const App = ({ initialScore = 0, onScoreChange }) => {
           }
         />
         <Route path="exercise/matching-pair" element={<MatchingPair />} />
+        <Route path="exercise/sentence-reorder" element={<SentenceReoder />} />
         {/* <Route path="lessons" element={<Learn />} /> */}
         {/* <Route path="lessons" element={<Unit />} /> */}
         <Route path="unit/consonants" element={<Consonants />} />
@@ -126,7 +133,7 @@ const App = ({ initialScore = 0, onScoreChange }) => {
         <Route path="unit/number" element={<Number />} />
         <Route path="unit/conversation-1" element={<OneConversation />} />
         <Route path="unit/conversation-2" element={<TwoConversation />} />
-        <Route path="unit/conversation-3" element={<TwoConversation />} />
+        <Route path="unit/conversation-3" element={<ThreeConversation />} />
         <Route path="unit/grammar-1" element={<Grammar />} />
         <Route path="unit/grammar-3" element={<ThreeGrammar />} />
         <Route path="signin" element={<SignIn />} />
